@@ -1,0 +1,7041 @@
+/* =========================================================
+   WEBGIS TRANSPORTASI CIBINONG
+   STYLE.CSS - FINAL REVISI
+   ========================================================= */
+
+
+/* =========================================================
+   1. RESET
+   ========================================================= */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+:root {
+
+  --navy: #07325b;
+  --navy2: #0b477d;
+  --blue: #1769aa;
+
+  --red: #e53935;
+  --yellow: #f1a51c;
+  --green: #159447;
+  --purple: #8a3fd1;
+
+  --pedestrian: #e53935;
+  --transport: #159447;
+  --station: #1769aa;
+  --facility: #8a3fd1;
+
+  --text: #203040;
+  --muted: #71808e;
+
+  --border: #d9e1e8;
+  --light-border: #edf0f2;
+
+  --bg: #f2f5f8;
+  --white: #ffffff;
+
+}
+
+
+/* =========================================================
+   2. BODY
+   ========================================================= */
+
+body {
+
+  min-height: 100vh;
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  background: var(--bg);
+
+  color: var(--text);
+
+}
+
+button,
+input,
+select {
+
+  font-family: inherit;
+
+}
+
+button {
+
+  cursor: pointer;
+
+}
+
+
+/* =========================================================
+   3. APP
+   ========================================================= */
+
+.app {
+
+  width: 100%;
+
+  max-width: 1500px;
+
+  margin: auto;
+
+  padding: 10px;
+
+}
+
+
+/* =========================================================
+   4. HEADER
+   ========================================================= */
+
+.topbar {
+
+  min-height: 58px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 18px;
+
+  padding:
+    8px 14px;
+
+  color: white;
+
+  background: var(--navy);
+
+  border-radius:
+    12px 12px 0 0;
+
+  box-shadow:
+    0 3px 12px
+    rgba(0,0,0,.12);
+
+}
+
+
+/* =========================================================
+   5. BRAND
+   ========================================================= */
+
+.brand {
+
+  min-width: 280px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 9px;
+
+}
+
+.logo {
+
+  width: 38px;
+  height: 38px;
+
+  flex-shrink: 0;
+
+  display: grid;
+
+  place-items: center;
+
+  border-radius: 8px;
+
+  background: white;
+
+  color: var(--navy);
+
+  font-size: 19px;
+
+}
+
+.brand h1 {
+
+  margin-bottom: 2px;
+
+  color: white;
+
+  font-size: 15px;
+
+  line-height: 1.2;
+
+}
+
+.brand span {
+
+  color: #c9d9e9;
+
+  font-size: 9px;
+
+}
+
+
+/* =========================================================
+   6. SEARCH
+   ========================================================= */
+
+.search-box {
+
+  width: 290px;
+  height: 31px;
+
+  margin-left: auto;
+
+  display: flex;
+
+  overflow: hidden;
+
+  border-radius: 6px;
+
+  background: white;
+
+}
+
+.search-box input {
+
+  flex: 1;
+
+  min-width: 0;
+
+  border: 0;
+
+  outline: none;
+
+  padding:
+    0 10px;
+
+  color: #33424f;
+
+  font-size: 10px;
+
+}
+
+.search-box input::placeholder {
+
+  color: #9aa4ad;
+
+}
+
+.search-box button {
+
+  width: 38px;
+
+  flex-shrink: 0;
+
+  border: 0;
+
+  background: white;
+
+  color: var(--navy);
+
+}
+
+.search-box button:hover {
+
+  background: #f1f5f8;
+
+}
+
+
+/* =========================================================
+   7. NAVIGATION
+   ========================================================= */
+
+.topnav {
+
+  display: flex;
+
+  gap: 3px;
+
+}
+
+.nav-btn {
+
+  border: 0;
+
+  border-radius: 5px;
+
+  padding:
+    8px 7px;
+
+  background: transparent;
+
+  color: white;
+
+  font-size: 9px;
+
+}
+
+.nav-btn:hover,
+.nav-btn.active {
+
+  background:
+    rgba(255,255,255,.12);
+
+}
+
+.nav-btn i {
+
+  margin-right: 3px;
+
+}
+
+
+/* =========================================================
+   8. MAIN GRID
+   ========================================================= */
+.main-grid {
+    display: grid;
+    grid-template-columns: 220px minmax(400px, 1fr) 250px;
+    gap: 0;
+    background: white;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.10);
+}
+/* =========================================================
+   9. PANELS
+   ========================================================= */
+
+.panel {
+
+  min-height: 500px;
+
+  background: white;
+
+}
+
+.left-panel {
+
+  padding:
+    12px 10px;
+
+  border-right:
+    1px solid var(--border);
+
+}
+
+.right-panel {
+
+  padding:
+    12px 11px;
+
+  border-left:
+    1px solid var(--border);
+
+}
+
+
+/* =========================================================
+   10. PANEL TITLE
+   ========================================================= */
+
+.panel-title {
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  margin-bottom: 12px;
+
+  color: #40505f;
+
+  font-size: 9px;
+
+  font-weight: 800;
+
+}
+
+.panel-title i {
+
+  color: var(--navy2);
+
+}
+
+
+/* =========================================================
+   11. LAYER GROUP
+   ========================================================= */
+
+.layer-group {
+
+  margin-bottom: 10px;
+
+  padding-bottom: 9px;
+
+  border-bottom:
+    1px solid var(--light-border);
+
+}
+
+.layer-group h3 {
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  margin-bottom: 7px;
+
+  color: #354554;
+
+  font-size: 9px;
+
+}
+
+.collapse {
+
+  border: 0;
+
+  background: transparent;
+
+  color: #8b98a4;
+
+  font-size: 12px;
+
+}
+
+
+/* =========================================================
+   12. CHECK ROW
+   ========================================================= */
+
+.check-row {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 6px;
+
+  margin: 7px 0;
+
+  color: #40505f;
+
+  font-size: 8px;
+
+  line-height: 1.3;
+
+  cursor: pointer;
+
+}
+
+.check-row input {
+
+  width: 12px;
+  height: 12px;
+
+  flex-shrink: 0;
+
+  accent-color: var(--blue);
+
+  cursor: pointer;
+
+}
+
+
+/* =========================================================
+   13. SYMBOL
+   ========================================================= */
+
+.symbol,
+.line-sample,
+.point,
+.buffer-sample {
+
+  display: inline-block;
+
+  flex: 0 0 auto;
+
+}
+
+
+/* =========================================================
+   14. BATAS
+   ========================================================= */
+
+.boundary {
+
+  width: 16px;
+  height: 11px;
+
+  border:
+    1.5px dashed #333;
+
+}
+
+.village-boundary {
+
+  width: 16px;
+  height: 11px;
+
+  border:
+    1px dashed #777;
+
+}
+
+
+/* =========================================================
+   15. ROAD SYMBOL
+   ========================================================= */
+
+.line-sample {
+
+  width: 26px;
+  height: 4px;
+
+  border-radius: 3px;
+
+}
+
+.line-sample.arteri {
+
+  background: var(--red);
+
+}
+
+.line-sample.lokal {
+
+  background: var(--yellow);
+
+}
+
+.line-sample.utama {
+
+  background: var(--blue);
+
+}
+
+.line-sample.kecil {
+
+  height: 3px;
+
+  background: #333333;
+
+}
+
+
+/* =========================================================
+   16. POINT SYMBOL LAMA
+   ========================================================= */
+
+.point {
+
+  width: 9px;
+  height: 9px;
+
+  border-radius: 50%;
+
+}
+
+.point.terminal {
+
+  background:
+    var(--transport);
+
+}
+
+.point.stasiun {
+
+  background:
+    var(--station);
+
+}
+
+.point.halte {
+
+  background:
+    var(--facility);
+
+}
+
+
+/* =========================================================
+   17. BUFFER
+   ========================================================= */
+
+.buffer-sample {
+
+  width: 24px;
+  height: 10px;
+
+  border-radius: 2px;
+
+}
+
+.buffer-sample.arteri {
+
+  background:
+    rgba(229,57,53,.35);
+
+  border:
+    1px solid var(--red);
+
+}
+
+.buffer-sample.lokal {
+
+  background:
+    rgba(241,165,28,.35);
+
+  border:
+    1px solid var(--yellow);
+
+}
+
+.buffer-sample.utama {
+
+  background:
+    rgba(23,105,170,.35);
+
+  border:
+    1px solid var(--blue);
+
+}
+
+.buffer-sample.kecil {
+
+  background:
+    rgba(51,51,51,.25);
+
+  border:
+    1px solid #333;
+
+}
+
+.buffer-sample.titik {
+
+  background:
+    rgba(138,63,209,.35);
+
+  border:
+    1px solid var(--purple);
+
+}
+
+
+/* =========================================================
+   18. RESET BUTTON
+   ========================================================= */
+
+.reset-btn {
+
+  width: 100%;
+
+  padding: 7px;
+
+  border:
+    1px solid var(--border);
+
+  border-radius: 5px;
+
+  background: #f8fafb;
+
+  color: #52616d;
+
+  font-size: 8px;
+
+  transition:
+    .2s ease;
+
+}
+
+.reset-btn:hover {
+
+  background: #eef4f8;
+
+  color: var(--navy);
+
+}
+
+
+/* =========================================================
+   19. MAP PANEL
+   ========================================================= */
+
+.map-panel {
+
+  position: relative;
+
+  min-height: 500px;
+
+  overflow: hidden;
+
+}
+
+#mapid {
+
+  width: 100%;
+
+  height: 500px;
+
+}
+
+
+/* =========================================================
+   20. MAP TOOLS
+   ========================================================= */
+
+.map-tools {
+
+  position: absolute;
+
+  top: 10px;
+
+  right: 10px;
+
+  z-index: 900;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 4px;
+
+}
+
+.map-tools button {
+
+  width: 29px;
+  height: 29px;
+
+  display: grid;
+
+  place-items: center;
+
+  border:
+    1px solid #ccd5dc;
+
+  border-radius: 5px;
+
+  background: white;
+
+  color: #45535e;
+
+  font-size: 14px;
+
+  box-shadow:
+    0 1px 5px
+    rgba(0,0,0,.18);
+
+}
+
+.map-tools button:hover {
+
+  background:
+    #f4f7f9;
+
+}
+
+
+/* =========================================================
+   21. MAP SOURCE NOTE
+   ========================================================= */
+
+.scale-note {
+
+  position: absolute;
+
+  left: 10px;
+
+  bottom: 9px;
+
+  z-index: 800;
+
+  padding:
+    4px 7px;
+
+  border-radius: 4px;
+
+  background:
+    rgba(255,255,255,.92);
+
+  color: #64717c;
+
+  font-size: 7px;
+
+  line-height: 1.4;
+
+  box-shadow:
+    0 1px 4px
+    rgba(0,0,0,.08);
+
+}
+
+
+/* =========================================================
+   22. LEAFLET
+   ========================================================= */
+
+.leaflet-popup-content-wrapper {
+
+  border-radius: 7px;
+
+}
+
+.leaflet-popup-content {
+
+  margin:
+    9px 11px;
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  font-size: 10px;
+
+}
+
+.leaflet-control-attribution {
+
+  font-size: 7px;
+
+}
+
+
+/* =========================================================
+   23. MARKER TITIK FASILITAS
+   ========================================================= */
+
+.facility-map-icon {
+
+  background:
+    transparent;
+
+  border: none;
+
+}
+
+.facility-map-icon span {
+
+  width: 30px;
+  height: 30px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border:
+    3px solid white;
+
+  border-radius: 50%;
+
+  background:
+    var(--marker-color);
+
+  color: white;
+
+  box-shadow:
+    0 2px 6px
+    rgba(0,0,0,.30);
+
+  font-size: 14px;
+
+}
+
+
+/* =========================================================
+   24. RIGHT PANEL - INFORMATION
+   ========================================================= */
+
+.info-card {
+
+  margin-bottom: 10px;
+
+  padding-bottom: 9px;
+
+  border-bottom:
+    1px solid var(--light-border);
+
+}
+
+.info-card h2 {
+
+  margin-bottom: 9px;
+
+  color: var(--navy);
+
+  font-size: 13px;
+
+}
+
+.info-card h3 {
+
+  margin-bottom: 8px;
+
+  color: #5d6a76;
+
+  font-size: 9px;
+
+}
+
+
+/* =========================================================
+   25. INFO ROW
+   ========================================================= */
+
+.info-row {
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  gap: 7px;
+
+  margin:
+    5px 0;
+
+  font-size: 8px;
+
+  line-height: 1.25;
+
+}
+
+.info-row span {
+
+  color: #77838e;
+
+}
+
+.info-row b {
+
+  color: #374653;
+
+  text-align: right;
+
+}
+
+
+/* =========================================================
+   26. SOURCE DATA
+   ========================================================= */
+
+.source-data-card {
+
+  margin-top: 3px;
+
+}
+
+.source-data-card h3 {
+
+  margin-top: 7px;
+
+  margin-bottom: 6px;
+
+}
+
+.source-data-card .info-row {
+
+  padding:
+    2px 0;
+
+  margin:
+    1px 0;
+
+  line-height: 1.2;
+
+}
+
+
+/* =========================================================
+   27. ROAD TOTAL INFO
+   ========================================================= */
+
+.road-total-info {
+
+  margin-top: 5px;
+
+  padding-top: 7px;
+
+  border-top:
+    1px solid #e1e6ea;
+
+}
+
+.stat-note {
+
+  margin-top: 6px;
+
+  padding-top: 5px;
+
+  border-top:
+    1px solid #e5e9ec;
+
+  font-size: 7px;
+
+  line-height: 1.4;
+
+  color: #7a8791;
+
+}
+
+
+/* =========================================================
+   28. HELP CARD
+   ========================================================= */
+
+.help-card {
+
+  padding: 8px;
+
+  border:
+    1px solid #d7eaf7;
+
+  border-radius: 6px;
+
+  background: #edf6fc;
+
+}
+
+.help-card h3 {
+
+  margin-bottom: 5px;
+
+  color: var(--navy);
+
+  font-size: 8px;
+
+}
+
+.help-card h3 i {
+
+  margin-right: 4px;
+
+}
+
+.help-card p {
+
+  color: #61717e;
+
+  font-size: 7px;
+
+  line-height: 1.5;
+
+}
+
+
+/* =========================================================
+   29. DASHBOARD
+   ========================================================= */
+
+.dashboard-grid {
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+
+  gap: 10px;
+
+  margin-top: 10px;
+
+  width: 100%;
+
+}
+
+
+/* =========================================================
+   30. DASH CARD
+   ========================================================= */
+
+.dash-card {
+
+  min-height: 190px;
+
+  overflow: hidden;
+
+  border:
+    1px solid #e2e7eb;
+
+  border-radius: 8px;
+
+  background: white;
+
+  box-shadow:
+    0 3px 11px
+    rgba(0,0,0,.08);
+
+}
+
+
+/* =========================================================
+   31. DASH HEADER
+   ========================================================= */
+
+.dash-header {
+
+  min-height: 32px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  padding:
+    8px 10px;
+
+  background: var(--navy);
+
+  color: white;
+
+  font-size: 8px;
+
+  font-weight: 700;
+
+}
+
+.dash-header i {
+
+  font-size: 10px;
+
+}
+
+
+/* =========================================================
+   32. ROAD TABLE
+   ========================================================= */
+
+.road-table-wrapper {
+
+  width: 100%;
+
+  padding:
+    8px 10px 10px;
+
+  overflow-x: auto;
+
+}
+
+.road-table {
+
+  width: 100%;
+
+  border-collapse:
+    collapse;
+
+  table-layout:
+    fixed;
+
+  font-size: 8px;
+
+  color: #273744;
+
+}
+
+.road-table thead th {
+
+  padding:
+    7px 6px;
+
+  background:
+    #eef4f8;
+
+  color:
+    #173f67;
+
+  font-size: 7px;
+
+  font-weight: 700;
+
+  text-align: left;
+
+  border-bottom:
+    1px solid #d9e1e7;
+
+}
+
+.road-table th:nth-child(1),
+.road-table td:nth-child(1) {
+
+  width: 46%;
+
+}
+
+.road-table th:nth-child(2),
+.road-table td:nth-child(2) {
+
+  width: 24%;
+
+  text-align: center;
+
+}
+
+.road-table th:nth-child(3),
+.road-table td:nth-child(3) {
+
+  width: 30%;
+
+  text-align: right;
+
+}
+
+.road-table tbody td {
+
+  padding:
+    7px 6px;
+
+  border-bottom:
+    1px solid #e6ebef;
+
+  vertical-align: middle;
+
+}
+
+.road-table tbody td:first-child {
+
+  font-weight: 600;
+
+  white-space:
+    nowrap;
+
+}
+
+.table-road-line {
+
+  display: inline-block;
+
+  width: 20px;
+
+  height: 3px;
+
+  margin-right: 5px;
+
+  border-radius: 3px;
+
+  vertical-align: middle;
+
+}
+
+.table-road-line.arteri {
+
+  background:
+    var(--red);
+
+}
+
+.table-road-line.lokal {
+
+  background:
+    var(--yellow);
+
+}
+
+.table-road-line.utama {
+
+  background:
+    var(--blue);
+
+}
+
+.table-road-line.kecil {
+
+  background:
+    #333;
+
+}
+
+.road-table .total-row td {
+
+  background:
+    #edf5fb;
+
+  color:
+    #173f67;
+
+  font-weight: 700;
+
+  border-bottom:
+    none;
+
+}
+
+
+/* =========================================================
+   33. FACILITY SUMMARY
+   ========================================================= */
+
+.facility-summary {
+
+  padding:
+    9px 10px;
+
+}
+
+
+/* =========================================================
+   34. 4 CATEGORY CARDS
+   ========================================================= */
+
+.facility-counts {
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, minmax(0, 1fr));
+
+  gap: 6px;
+
+  padding:
+    9px 10px 8px;
+
+}
+
+
+/* =========================================================
+   35. FACILITY COUNT CARD
+   ========================================================= */
+
+.facility-count {
+
+  min-width: 0;
+
+  min-height: 62px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 7px;
+
+  padding:
+    7px;
+
+  border:
+    1px solid #e7ebef;
+
+  border-radius: 7px;
+
+  background:
+    linear-gradient(
+      180deg,
+      #ffffff 0%,
+      #fafbfd 100%
+    );
+
+}
+
+
+/* =========================================================
+   36. CATEGORY ICON CIRCLE
+   ========================================================= */
+
+.facility-count-icon {
+
+  width: 35px;
+  height: 35px;
+
+  flex-shrink: 0;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border-radius: 50%;
+
+  font-size: 17px;
+
+}
+
+
+/* PEJALAN KAKI */
+
+.facility-count-icon.pedestrian {
+
+  color:
+    var(--pedestrian);
+
+  background:
+    #fde9e8;
+
+}
+
+
+/* ANGKUTAN UMUM */
+
+.facility-count-icon.transport {
+
+  color:
+    var(--transport);
+
+  background:
+    #e3f5eb;
+
+}
+
+
+/* STASIUN */
+
+.facility-count-icon.station {
+
+  color:
+    var(--station);
+
+  background:
+    #e5edfb;
+
+}
+
+
+/* FASILITAS UMUM */
+
+.facility-count-icon.facility {
+
+  color:
+    var(--facility);
+
+  background:
+    #eee4fb;
+
+}
+
+
+/* =========================================================
+   37. CATEGORY TEXT
+   ========================================================= */
+
+.facility-count-content {
+
+  min-width: 0;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+
+}
+
+.facility-count-content span {
+
+  color:
+    #68788a;
+
+  font-size: 7px;
+
+  line-height: 1.25;
+
+  white-space:
+    nowrap;
+
+  overflow: hidden;
+
+  text-overflow:
+    ellipsis;
+
+}
+
+.facility-count-content strong {
+
+  margin-top: 3px;
+
+  color:
+    var(--navy);
+
+  font-size: 18px;
+
+  line-height: 1;
+
+}
+
+
+/* =========================================================
+   38. FACILITY LIST
+   ========================================================= */
+
+.facility-list {
+
+  display: flex;
+
+  flex-direction: column;
+
+  max-height: 125px;
+
+  overflow-y: auto;
+
+  padding:
+    0 10px;
+
+}
+
+.facility-list::-webkit-scrollbar {
+
+  width: 6px;
+
+}
+
+.facility-list::-webkit-scrollbar-track {
+
+  background:
+    #f1f4f6;
+
+  border-radius: 5px;
+
+}
+
+.facility-list::-webkit-scrollbar-thumb {
+
+  background:
+    #b7c1c9;
+
+  border-radius: 5px;
+
+}
+
+
+/* =========================================================
+   39. FACILITY LIST ITEM
+   ========================================================= */
+
+.facility-list-item {
+
+  width: 100%;
+
+  min-height: 30px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  padding:
+    6px 4px;
+
+  border-bottom:
+    1px solid var(--light-border);
+
+  cursor: pointer;
+
+  transition:
+    background .2s ease;
+
+}
+
+.facility-list-item:hover {
+
+  background:
+    #f3f7fb;
+
+}
+
+
+/* =========================================================
+   40. FACILITY LIST ICON
+   ========================================================= */
+
+.facility-list-icon {
+
+  width: 19px;
+  height: 19px;
+
+  flex-shrink: 0;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  color:
+    var(--icon-color);
+
+  font-size: 12px;
+
+}
+
+
+/* =========================================================
+   41. FACILITY INFO
+   ========================================================= */
+
+.facility-info {
+
+  flex: 1;
+
+  min-width: 0;
+
+  display: flex;
+
+  align-items: baseline;
+
+  gap: 5px;
+
+}
+
+.facility-info strong {
+
+  overflow: hidden;
+
+  text-overflow:
+    ellipsis;
+
+  white-space:
+    nowrap;
+
+  color:
+    #203040;
+
+  font-size: 8px;
+
+  font-weight: 700;
+
+}
+
+.facility-info small {
+
+  flex-shrink: 0;
+
+  color:
+    #71808e;
+
+  font-size: 6px;
+
+  white-space:
+    nowrap;
+
+}
+
+
+/* =========================================================
+   42. LIST ARROW
+   ========================================================= */
+
+.facility-list-item > i {
+
+  flex-shrink: 0;
+
+  color:
+    #9aa4ad;
+
+  font-size: 7px;
+
+}
+
+.facility-list-item:hover > i {
+
+  color:
+    var(--blue);
+
+}
+
+
+/* =========================================================
+   43. ERROR LIST
+   ========================================================= */
+
+.facility-list-item.error {
+
+  justify-content: center;
+
+  padding:
+    12px;
+
+  color:
+    #8b5555;
+
+  font-size: 8px;
+
+}
+
+
+/* =========================================================
+   44. ANALYSIS SELECT
+   ========================================================= */
+
+#analysisSelect {
+
+  width:
+    calc(100% - 20px);
+
+  margin:
+    10px;
+
+  padding:
+    6px 7px;
+
+  border:
+    1px solid #d7dfe5;
+
+  border-radius: 4px;
+
+  outline: none;
+
+  background:
+    white;
+
+  color:
+    #40505f;
+
+  font-size: 8px;
+
+  cursor: pointer;
+
+}
+
+#analysisSelect:focus {
+
+  border-color:
+    var(--blue);
+
+}
+
+
+/* =========================================================
+   45. ANALYSIS RESULT
+   ========================================================= */
+
+.analysis-result {
+
+  display: grid;
+
+  grid-template-columns:
+    1fr 1fr;
+
+  gap: 6px;
+
+  padding:
+    0 10px 8px;
+
+}
+
+.analysis-result div {
+
+  min-width: 0;
+
+  padding: 7px;
+
+  border-radius: 4px;
+
+  background:
+    #f4f7f9;
+
+}
+
+.analysis-result span,
+.analysis-result b {
+
+  display: block;
+
+}
+
+.analysis-result span {
+
+  margin-bottom: 3px;
+
+  color:
+    #7b8790;
+
+  font-size: 7px;
+
+}
+
+.analysis-result b {
+
+  overflow: hidden;
+
+  color:
+    var(--navy);
+
+  font-size: 7px;
+
+  text-overflow:
+    ellipsis;
+
+  white-space:
+    nowrap;
+
+}
+
+
+/* =========================================================
+   46. ANALYSIS MAP
+   ========================================================= */
+
+.analysis-map {
+
+  position: relative;
+
+  height: 80px;
+
+  overflow: hidden;
+
+  margin:
+    0 10px 10px;
+
+  border-radius: 5px;
+
+  background:
+    #edf1ed;
+
+}
+
+.analysis-map .leaflet-container {
+
+  width: 100%;
+
+  height: 100%;
+
+}
+
+
+/* =========================================================
+   47. SEARCH RESULT
+   ========================================================= */
+
+.search-result {
+
+  padding: 10px;
+
+  color:
+    #3d4650;
+
+  font-size: 8px;
+
+}
+
+.result-input {
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  min-height: 30px;
+
+  margin-bottom: 10px;
+
+  padding:
+    6px 8px;
+
+  border:
+    1px solid #d8dfe4;
+
+  border-radius: 4px;
+
+  background:
+    white;
+
+}
+
+.result-input span {
+
+  overflow: hidden;
+
+  text-overflow:
+    ellipsis;
+
+  white-space:
+    nowrap;
+
+}
+
+.result-input i {
+
+  flex-shrink: 0;
+
+  color:
+    #89949c;
+
+}
+
+.result-row {
+
+  display: flex;
+
+  justify-content: space-between;
+
+  gap: 8px;
+
+  margin:
+    6px 0;
+
+}
+
+.result-row span:first-child {
+
+  color:
+    #7a8791;
+
+}
+
+.result-row span:last-child {
+
+  max-width: 65%;
+
+  font-weight: 600;
+
+  text-align: right;
+
+}
+
+
+/* =========================================================
+   48. DETAIL BUTTON
+   ========================================================= */
+
+.detail-btn {
+
+  margin-top: 5px;
+
+  padding:
+    6px 9px;
+
+  border: 0;
+
+  border-radius: 4px;
+
+  background:
+    var(--blue);
+
+  color: white;
+
+  font-size: 8px;
+
+}
+
+.detail-btn:hover {
+
+  background:
+    var(--navy2);
+
+}
+
+
+/* =========================================================
+   49. MODAL
+   ========================================================= */
+
+.modal {
+
+  position: fixed;
+
+  inset: 0;
+
+  z-index: 2000;
+
+  display: grid;
+
+  place-items: center;
+
+  padding: 20px;
+
+  background:
+    rgba(0,0,0,.48);
+
+}
+
+.modal.hidden {
+
+  display: none;
+
+}
+
+.modal-content {
+
+  position: relative;
+
+  width:
+    min(500px,90vw);
+
+  max-height: 80vh;
+
+  overflow-y: auto;
+
+  padding: 22px;
+
+  border-radius: 9px;
+
+  background:
+    white;
+
+  box-shadow:
+    0 15px 40px
+    rgba(0,0,0,.25);
+
+}
+
+.modal-content h2 {
+
+  margin-bottom: 10px;
+
+  color:
+    var(--navy);
+
+  font-size: 17px;
+
+}
+
+.modal-content h3 {
+
+  margin:
+    14px 0 6px;
+
+  color:
+    var(--navy);
+
+  font-size: 12px;
+
+}
+
+.modal-content p {
+
+  margin-bottom: 9px;
+
+  color:
+    #53616d;
+
+  font-size: 10px;
+
+  line-height: 1.6;
+
+}
+
+.modal-close {
+
+  position: absolute;
+
+  top: 7px;
+
+  right: 11px;
+
+  border: 0;
+
+  background:
+    transparent;
+
+  color:
+    #6d7881;
+
+  font-size: 24px;
+
+}
+
+
+/* =========================================================
+   50. FOOTER
+   ========================================================= */
+
+.main-footer {
+
+  margin-top: 9px;
+
+  overflow: hidden;
+
+  border-radius:
+    0 0 12px 12px;
+
+  background:
+    white;
+
+  box-shadow:
+    0 4px 14px
+    rgba(0,0,0,.10);
+
+}
+
+.footer-content {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 17px;
+
+  padding:
+    18px 20px;
+
+}
+
+
+/* =========================================================
+   51. CREATOR CARD
+   ========================================================= */
+
+.creator-card {
+
+  flex: 1;
+
+  min-width: 0;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+}
+
+.creator-photo {
+
+  width: 52px;
+  height: 52px;
+
+  flex-shrink: 0;
+
+  object-fit: cover;
+
+  border:
+    2px solid #e5edf3;
+
+  border-radius: 50%;
+
+}
+
+.creator-detail {
+
+  min-width: 0;
+
+}
+
+.creator-detail h3 {
+
+  margin-bottom: 3px;
+
+  color:
+    var(--navy);
+
+  font-size: 10px;
+
+}
+
+.creator-detail p {
+
+  margin-bottom: 3px;
+
+  color:
+    #64717c;
+
+  font-size: 7px;
+
+  line-height: 1.4;
+
+}
+
+.creator-detail p strong {
+
+  color:
+    #40505f;
+
+}
+
+.creator-description {
+
+  max-width: 310px;
+
+  color:
+    #7b8790 !important;
+
+  font-size: 6px !important;
+
+  line-height: 1.45 !important;
+
+}
+
+
+/* =========================================================
+   52. FOOTER DIVIDER
+   ========================================================= */
+
+.footer-divider {
+
+  width: 1px;
+
+  height: 55px;
+
+  flex-shrink: 0;
+
+  background:
+    #e1e6ea;
+
+}
+
+
+/* =========================================================
+   53. UNIVERSITY
+   ========================================================= */
+
+.university-section {
+
+  min-width: 300px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+}
+
+.upn-logo {
+
+  width: 50px;
+  height: 50px;
+
+  flex-shrink: 0;
+
+  object-fit: contain;
+
+}
+
+.university-text {
+
+  color:
+    #53616d;
+
+  font-size: 6px;
+
+  line-height: 1.5;
+
+  font-weight: 700;
+
+}
+
+.university-text .year {
+
+  margin-top: 2px;
+
+  color:
+    var(--navy);
+
+  font-size: 7px;
+
+}
+
+
+/* =========================================================
+   54. FOOTER BOTTOM
+   ========================================================= */
+
+.footer-bottom {
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 10px;
+
+  padding:
+    7px 20px;
+
+  border-top:
+    1px solid var(--light-border);
+
+  background:
+    #fafbfc;
+
+  color:
+    #8a959d;
+
+  font-size: 6px;
+
+}
+
+
+/* =========================================================
+   55. RESPONSIVE 1100px
+   ========================================================= */
+
+@media (max-width: 1100px) {
+
+  .topbar {
+
+    flex-wrap: wrap;
+
+    gap: 9px;
+
+  }
+
+  .brand {
+
+    min-width: 230px;
+
+  }
+
+  .search-box {
+
+    width: 250px;
+
+    margin-left: 0;
+
+  }
+
+.main-grid {
+    grid-template-columns: 180px minmax(350px, 1fr) 230px;
+}
+
+  .dashboard-grid {
+
+    grid-template-columns:
+      repeat(3,minmax(0,1fr));
+
+  }
+
+  .footer-content {
+
+    flex-wrap: wrap;
+
+  }
+
+  .footer-divider {
+
+    display: none;
+
+  }
+
+  .university-section {
+
+    width: 100%;
+
+  }
+
+}
+
+
+/* =========================================================
+   56. RESPONSIVE 850px
+   ========================================================= */
+
+@media (max-width: 850px) {
+
+  .main-grid {
+
+    grid-template-columns:
+      175px
+      1fr;
+
+  }
+
+  .right-panel {
+
+    display: none;
+
+  }
+
+  #mapid {
+
+    height: 500px;
+
+  }
+
+  .dashboard-grid {
+
+    grid-template-columns:
+      repeat(3,minmax(0,1fr));
+
+  }
+
+  .facility-counts {
+
+    grid-template-columns:
+      repeat(4,minmax(0,1fr));
+
+  }
+
+}
+
+
+/* =========================================================
+   57. RESPONSIVE 700px
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+  .dashboard-grid {
+
+    grid-template-columns:
+      1fr;
+
+  }
+
+  .facility-counts {
+
+    grid-template-columns:
+      repeat(2,minmax(0,1fr));
+
+  }
+
+  .facility-list {
+
+    max-height: 190px;
+
+  }
+
+}
+
+
+/* =========================================================
+   58. RESPONSIVE 600px
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+  .app {
+
+    padding: 6px;
+
+  }
+
+  .topbar {
+
+    padding: 10px;
+
+    border-radius:
+      9px 9px 0 0;
+
+  }
+
+  .brand {
+
+    width: 100%;
+
+    min-width: 0;
+
+  }
+
+  .search-box {
+
+    width: 100%;
+
+  }
+
+  .topnav {
+
+    width: 100%;
+
+    justify-content:
+      space-between;
+
+  }
+
+  .nav-btn {
+
+    flex: 1;
+
+    padding:
+      7px 2px;
+
+    font-size: 8px;
+
+  }
+
+  .main-grid {
+
+    display: block;
+
+  }
+
+  .left-panel {
+
+    border-right: 0;
+
+    border-bottom:
+      1px solid var(--border);
+
+  }
+
+  .right-panel {
+
+    display: block;
+
+    border-left: 0;
+
+    border-top:
+      1px solid var(--border);
+
+  }
+
+  .map-panel {
+
+    min-height: 420px;
+
+  }
+
+  #mapid {
+
+    height: 420px;
+
+  }
+
+  .dashboard-grid {
+
+    grid-template-columns:
+      1fr;
+
+  }
+
+  .facility-counts {
+
+    grid-template-columns:
+      repeat(2,1fr);
+
+  }
+
+  .facility-count {
+
+    min-height: 60px;
+
+  }
+
+  .footer-content {
+
+    flex-direction: column;
+
+    align-items:
+      flex-start;
+
+  }
+
+  .creator-card {
+
+    width: 100%;
+
+  }
+
+  .university-section {
+
+    width: 100%;
+
+    min-width: 0;
+
+  }
+
+  .footer-bottom {
+
+    flex-direction: column;
+
+    align-items:
+      flex-start;
+
+    padding:
+      7px 12px;
+
+  }
+
+}
+
+
+/* =========================================================
+   59. RESPONSIVE 450px
+   ========================================================= */
+
+@media (max-width: 450px) {
+
+  .brand h1 {
+
+    font-size: 13px;
+
+  }
+
+  .brand span {
+
+    font-size: 8px;
+
+  }
+
+  .nav-btn {
+
+    font-size: 7px;
+
+  }
+
+  .facility-counts {
+
+    grid-template-columns:
+      1fr 1fr;
+
+    gap: 5px;
+
+  }
+
+  .facility-count-icon {
+
+    width: 31px;
+    height: 31px;
+
+    font-size: 15px;
+
+  }
+
+  .facility-count-content span {
+
+    font-size: 6px;
+
+  }
+
+  .facility-count-content strong {
+
+    font-size: 16px;
+
+  }
+
+}
+
+
+/* =========================================================
+   60. FACILITY POPUP
+   ========================================================= */
+
+.facility-popup {
+
+  min-width: 180px;
+
+}
+
+.facility-popup p {
+
+  margin:
+    6px 0;
+
+  color:
+    #5d6a76;
+
+  font-size: 9px;
+
+  line-height: 1.4;
+
+}
+
+.facility-popup small {
+
+  color:
+    #7a8791;
+
+  font-size: 7px;
+
+}
+
+
+/* =========================================================
+   61. LEAFLET MAP ICON FIX
+   ========================================================= */
+
+.leaflet-marker-icon.facility-map-icon {
+
+  background:
+    transparent !important;
+
+  border:
+    none !important;
+
+}
+
+
+/* =========================================================
+   62. SCROLLBAR
+   ========================================================= */
+
+::-webkit-scrollbar {
+
+  width: 7px;
+  height: 7px;
+
+}
+
+::-webkit-scrollbar-track {
+
+  background:
+    #f1f4f6;
+
+}
+
+::-webkit-scrollbar-thumb {
+
+  background:
+    #bcc6ce;
+
+  border-radius:
+    5px;
+
+}
+
+::-webkit-scrollbar-thumb:hover {
+
+  background:
+    #9ca8b1;
+
+}
+
+/* =========================================================
+   FIX INFORMASI WILAYAH
+   ========================================================= */
+
+.main-grid {
+  align-items: stretch;
+}
+
+
+/* =========================================================
+   REGION INFO CARD
+   ========================================================= */
+
+.region-info-card {
+  width: 100%;
+  overflow: hidden;
+}
+
+
+/* =========================================================
+   FOTO KECAMATAN
+   ========================================================= */
+
+.region-image {
+  position: relative;
+  width: 100%;
+  height: 110px;
+  overflow: hidden;
+  margin-bottom: 8px;
+  border-radius: 5px;
+  background: #edf1f4;
+}
+
+.region-image img {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  object-position: center;
+
+  border: 0;
+}
+
+.image-source {
+  position: absolute;
+
+  left: 5px;
+  bottom: 4px;
+
+  padding: 2px 4px;
+
+  border-radius: 2px;
+
+  background: rgba(255,255,255,.88);
+
+  color: #6f7b85;
+
+  font-size: 5px;
+
+  line-height: 1.2;
+}
+
+
+/* =========================================================
+   NAMA WILAYAH
+   ========================================================= */
+
+.region-name {
+  margin:
+    5px 0 3px;
+
+  color:
+    var(--navy);
+
+  font-size: 14px;
+
+  line-height: 1.2;
+}
+
+
+/* =========================================================
+   LOKASI
+   ========================================================= */
+
+.region-location {
+  display: flex;
+
+  align-items: center;
+
+  gap: 4px;
+
+  margin-bottom: 8px;
+
+  color:
+    #607180;
+
+  font-size: 7px;
+
+  line-height: 1.3;
+}
+
+.region-location i {
+  color:
+    var(--navy);
+
+  font-size: 8px;
+}
+
+
+/* =========================================================
+   DESKRIPSI
+   ========================================================= */
+
+.region-description {
+  margin:
+    0 0 9px;
+
+  color:
+    #61717e;
+
+  font-size: 14px;
+
+  line-height: 1.5;
+
+  text-align: left;
+}
+
+
+/* =========================================================
+   INFORMASI DASAR
+   ========================================================= */
+
+.region-basic-info {
+
+  margin-bottom: 9px;
+
+  padding:
+    7px 0;
+
+  border-top:
+    1px solid var(--border);
+
+  border-bottom:
+    1px solid var(--border);
+
+}
+
+.region-basic-info > div {
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 6px;
+
+  padding:
+    3px 0;
+
+  font-size: 7px;
+
+  line-height: 1.2;
+
+}
+
+.region-basic-info span {
+
+  color:
+    #77838e;
+
+}
+
+.region-basic-info strong {
+
+  color:
+    #374653;
+
+  font-size: 7px;
+
+  text-align: right;
+
+}
+
+
+/* =========================================================
+   SUMBER DATA
+   ========================================================= */
+
+.region-info-card .info-card {
+
+  margin:
+    0 0 8px;
+
+  padding:
+    0 0 8px;
+
+  border-bottom:
+    1px solid var(--light-border);
+
+}
+
+.region-info-card .info-card h3 {
+
+  margin:
+    0 0 5px;
+
+  color:
+    #5d6a76;
+
+  font-size: 8px;
+
+}
+
+.region-info-card .info-row {
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 6px;
+
+  margin:
+    2px 0;
+
+  padding:
+    1px 0;
+
+  font-size: 7px;
+
+  line-height: 1.2;
+
+}
+
+.region-info-card .info-row span {
+
+  color:
+    #77838e;
+
+}
+
+.region-info-card .info-row b {
+
+  color:
+    #374653;
+
+  font-size: 7px;
+
+  text-align: right;
+
+}
+
+
+/* =========================================================
+   PETUNJUK PENGGUNAAN
+   ========================================================= */
+
+.region-info-card .help-card {
+
+  margin-top: 5px;
+
+  padding: 7px;
+
+  border:
+    1px solid #d7eaf7;
+
+  border-radius: 5px;
+
+  background:
+    #edf6fc;
+}
+
+.region-info-card .help-card h3 {
+
+  margin:
+    0 0 5px;
+
+  color:
+    var(--navy);
+
+  font-size: 7px;
+
+}
+
+.region-info-card .help-card p {
+
+  margin: 0;
+
+  color:
+    #61717e;
+
+  font-size: 6px;
+
+  line-height: 1.5;
+
+}
+
+
+/* =========================================================
+   FIX PANEL HEIGHT
+   ========================================================= */
+
+.left-panel,
+.right-panel {
+
+  min-height: 500px;
+
+}
+
+.map-panel {
+
+  height: 500px;
+
+  min-height: 500px;
+
+}
+
+#mapid {
+
+  width: 100%;
+
+  height: 500px !important;
+
+}
+
+
+/* =========================================================
+   DESKTOP - RIGHT PANEL TIDAK BOLEH MEMBESARKAN MAP
+   ========================================================= */
+
+@media (min-width: 851px) {
+
+  .main-grid {
+
+    align-items: start;
+
+  }
+
+  .right-panel {
+
+    height: 500px;
+
+    min-height: 500px;
+
+    overflow-y: auto;
+
+    overflow-x: hidden;
+
+  }
+
+  .map-panel {
+
+    height: 500px;
+
+  }
+
+}
+
+
+/* =========================================================
+   RIGHT PANEL SCROLLBAR
+   ========================================================= */
+
+.right-panel::-webkit-scrollbar {
+
+  width: 5px;
+
+}
+
+.right-panel::-webkit-scrollbar-track {
+
+  background:
+    #f3f5f7;
+
+}
+
+.right-panel::-webkit-scrollbar-thumb {
+
+  background:
+    #c1c9d0;
+
+  border-radius: 5px;
+
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 850px) {
+
+  .right-panel {
+
+    height: auto;
+
+    max-height: none;
+
+    overflow: visible;
+
+  }
+
+  .map-panel {
+
+    height: 500px;
+
+  }
+
+  #mapid {
+
+    height: 500px !important;
+
+  }
+
+}
+
+
+/* =========================================================
+   HP
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+  .region-image {
+
+    height: 160px;
+
+  }
+
+  .region-name {
+
+    font-size: 16px;
+
+  }
+
+  .region-location {
+
+    font-size: 9px;
+
+  }
+
+  .region-description {
+
+    font-size: 9px;
+
+  }
+
+  .region-basic-info > div {
+
+    font-size: 9px;
+
+  }
+
+  .region-basic-info strong {
+
+    font-size: 9px;
+
+  }
+
+  .region-info-card .info-row {
+
+    font-size: 9px;
+
+  }
+
+  .region-info-card .info-row b {
+
+    font-size: 9px;
+
+  }
+
+  .region-info-card .help-card p {
+
+    font-size: 8px;
+
+  }
+
+}
+
+/* =========================================================
+   PERSEBARAN TITIK - 4 KATEGORI
+   ========================================================= */
+
+.facility-category-grid {
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, 1fr);
+
+  gap: 6px;
+
+  margin-bottom: 8px;
+
+}
+
+
+.facility-category {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 7px;
+
+  min-width: 0;
+
+  padding:
+    8px 7px;
+
+  border:
+    1px solid #e2e7ec;
+
+  border-radius: 7px;
+
+  background:
+    #ffffff;
+
+}
+
+
+/* =========================================================
+   ICON
+   ========================================================= */
+
+.facility-category-icon {
+
+  width: 30px;
+
+  height: 30px;
+
+  min-width: 30px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border-radius: 50%;
+
+  font-size: 14px;
+
+}
+
+
+.facility-category-info {
+
+  min-width: 0;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 2px;
+
+}
+
+
+.facility-category-info span {
+
+  font-size: 7px;
+
+  line-height: 1.15;
+
+  color:
+    #607080;
+
+}
+
+
+.facility-category-info strong {
+
+  font-size: 14px;
+
+  line-height: 1;
+
+  color:
+    #07325b;
+
+}
+
+
+/* =========================================================
+   WARNA KATEGORI
+   ========================================================= */
+
+
+/* Akses Pejalan Kaki */
+
+.facility-category.pedestrian
+.facility-category-icon {
+
+  color:
+    #e53935;
+
+  background:
+    #fde9e9;
+
+}
+
+
+/* Angkutan Umum */
+
+.facility-category.public-transport
+.facility-category-icon {
+
+  color:
+    #159447;
+
+  background:
+    #e5f5eb;
+
+}
+
+
+/* Stasiun */
+
+.facility-category.station
+.facility-category-icon {
+
+  color:
+    #1769aa;
+
+  background:
+    #e5eef9;
+
+}
+
+
+/* Fasilitas Umum */
+
+.facility-category.facility
+.facility-category-icon {
+
+  color:
+    #8b3fd1;
+
+  background:
+    #f0e5fa;
+
+}
+
+
+/* =========================================================
+   LIST TITIK
+   ========================================================= */
+
+.facility-list {
+
+  width: 100%;
+
+  max-height: 125px;
+
+  overflow-y: auto;
+
+  border-top:
+    1px solid #e1e5e8;
+
+}
+
+
+.facility-list-item {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 7px;
+
+  min-height: 25px;
+
+  padding:
+    5px 2px;
+
+  border-bottom:
+    1px solid #edf0f2;
+
+  cursor: pointer;
+
+}
+
+
+.facility-list-item:hover {
+
+  background:
+    #f7f9fb;
+
+}
+
+
+.facility-info {
+
+  flex: 1;
+
+  min-width: 0;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 5px;
+
+}
+
+
+.facility-info strong {
+
+  overflow: hidden;
+
+  text-overflow: ellipsis;
+
+  white-space: nowrap;
+
+  color:
+    #173b63;
+
+  font-size: 7px;
+
+}
+
+
+.facility-info small {
+
+  white-space: nowrap;
+
+  color:
+    #89949e;
+
+  font-size: 5px;
+
+}
+
+
+.facility-list-item > i {
+
+  color:
+    #9aa6b0;
+
+  font-size: 7px;
+
+}
+
+
+/* =========================================================
+   ICON LIST
+   ========================================================= */
+
+.facility-dot {
+
+  width: 7px;
+
+  height: 7px;
+
+  min-width: 7px;
+
+  border-radius: 50%;
+
+}
+
+
+/* Pejalan kaki */
+
+.facility-dot.pedestrian {
+
+  background:
+    #e53935;
+
+}
+
+
+/* Angkutan umum */
+
+.facility-dot.public-transport {
+
+  background:
+    #159447;
+
+}
+
+
+/* Stasiun */
+
+.facility-dot.station {
+
+  background:
+    #1769aa;
+
+}
+
+
+/* Fasilitas umum */
+
+.facility-dot.facility {
+
+  background:
+    #8b3fd1;
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+  .facility-category-grid {
+
+    grid-template-columns:
+      repeat(2, 1fr);
+
+  }
+
+  .facility-category {
+
+    padding:
+      9px;
+
+  }
+
+  .facility-category-info span {
+
+    font-size: 9px;
+
+  }
+
+  .facility-category-info strong {
+
+    font-size: 16px;
+
+  }
+
+}
+
+/* ============================================================
+   FONT DAFTAR PERSEBARAN TITIK
+   ============================================================ */
+
+.facility-list-item {
+    font-size: 9px !important;
+    line-height: 1.2 !important;
+    min-height: 28px !important;
+    padding: 5px 8px !important;
+}
+
+.facility-list-item span {
+    font-size: 9px !important;
+}
+
+.facility-list-item .facility-category {
+    font-size: 7px !important;
+}
+
+.facility-list-item i {
+    font-size: 8px !important;
+}
+
+/* STATISTIK JARINGAN JALAN */
+.dash-card table {
+    font-size: 11px !important;
+}
+
+.dash-card table th {
+    font-size: 9px !important;
+}
+
+.dash-card table td {
+    font-size: 11px !important;
+}
+
+.dash-card table tr:last-child td {
+    font-weight: 600 !important;
+}
+
+/* =========================================================
+   SIMBOL KATEGORI PERSEBARAN TITIK
+   ========================================================= */
+
+.facility-list-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    min-height: 42px;
+    padding: 6px 8px;
+    border-bottom: 1px solid #e5e9ee;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.facility-list-item:hover {
+    background: #f7f9fb;
+}
+
+/* IKON KATEGORI */
+.facility-list-icon {
+    width: 28px;
+    height: 28px;
+    min-width: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 17px;
+}
+
+/* AKSES PEJALAN KAKI */
+.facility-list-icon.pejalan {
+    color: #e5252a;
+}
+
+/* ANGKUTAN UMUM */
+.facility-list-icon.angkutan {
+    color: #079447;
+}
+
+/* STASIUN */
+.facility-list-icon.stasiun {
+    color: #1267c4;
+}
+
+/* FASILITAS UMUM */
+.facility-list-icon.fasilitas {
+    color: #7b2bd9;
+}
+
+/* NAMA TITIK */
+.facility-list-name {
+    flex: 1;
+    min-width: 0;
+    font-size: 10px;
+    font-weight: 600;
+    color: #173b63;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* LABEL KATEGORI */
+.facility-list-category {
+    font-size: 7px;
+    font-weight: 500;
+    padding: 3px 7px;
+    border-radius: 10px;
+    white-space: nowrap;
+}
+
+/* WARNA LABEL */
+.facility-list-category.pejalan {
+    color: #e5252a;
+    background: #fde8e8;
+}
+
+.facility-list-category.angkutan {
+    color: #079447;
+    background: #e5f6ed;
+}
+
+.facility-list-category.stasiun {
+    color: #1267c4;
+    background: #e6effd;
+}
+
+.facility-list-category.fasilitas {
+    color: #7b2bd9;
+    background: #f0e7fc;
+}
+
+/* PANAH KANAN */
+.facility-list-arrow {
+    color: #8996a8;
+    font-size: 11px;
+    margin-left: 4px;
+}
+
+/* =========================================================
+   HEADER TABEL
+   ========================================================= */
+
+.dashboard-grid .dash-card:first-child .road-table thead {
+    height: 30px !important;
+}
+
+.dashboard-grid .dash-card:first-child .road-table thead th {
+    padding: 7px 7px !important;
+
+    background: #eef4f8 !important;
+
+    color: #173f67 !important;
+
+    font-size: 8px !important;
+    font-weight: 700 !important;
+
+    border-bottom: 1px solid #d9e1e7 !important;
+}
+
+
+/* =========================================================
+   KOLOM
+   ========================================================= */
+
+.dashboard-grid .dash-card:first-child .road-table th:nth-child(1),
+.dashboard-grid .dash-card:first-child .road-table td:nth-child(1) {
+    width: 46% !important;
+
+    text-align: left !important;
+}
+
+.dashboard-grid .dash-card:first-child .road-table th:nth-child(2),
+.dashboard-grid .dash-card:first-child .road-table td:nth-child(2) {
+    width: 24% !important;
+
+    text-align: center !important;
+}
+
+.dashboard-grid .dash-card:first-child .road-table th:nth-child(3),
+.dashboard-grid .dash-card:first-child .road-table td:nth-child(3) {
+    width: 30% !important;
+
+    text-align: right !important;
+}
+
+
+/* =========================================================
+   BARIS DATA
+   ========================================================= */
+
+.dashboard-grid .dash-card:first-child .road-table tbody tr {
+    height: 32px !important;
+}
+
+.dashboard-grid .dash-card:first-child .road-table tbody td {
+    padding: 7px 7px !important;
+
+    font-size: 9px !important;
+
+    color: #273744 !important;
+
+    border-bottom: 1px solid #e1e6ea !important;
+
+    vertical-align: middle !important;
+}
+
+
+/* Nama jalan */
+.dashboard-grid .dash-card:first-child .road-table tbody td:first-child {
+    font-weight: 600 !important;
+}
+
+
+/* Angka */
+.dashboard-grid .dash-card:first-child .road-table tbody td:nth-child(2),
+.dashboard-grid .dash-card:first-child .road-table tbody td:nth-child(3) {
+    color: #173f67 !important;
+}
+
+
+/* =========================================================
+   BARIS TOTAL
+   ========================================================= */
+
+.dashboard-grid .dash-card:first-child .road-table tbody tr:last-child {
+    height: 34px !important;
+}
+
+.dashboard-grid .dash-card:first-child .road-table tbody tr:last-child td {
+    padding: 8px 7px !important;
+
+    background: #eaf3fa !important;
+
+    color: #173f67 !important;
+
+    font-weight: 700 !important;
+
+    border-bottom: none !important;
+}
+
+
+/* =========================================================
+   GARIS WARNA JALAN
+   ========================================================= */
+
+.dashboard-grid .dash-card:first-child .table-road-line {
+    display: inline-block !important;
+
+    width: 22px !important;
+    height: 3px !important;
+
+    margin-right: 7px !important;
+
+    vertical-align: middle !important;
+
+    border-radius: 3px !important;
+}
+
+.dashboard-grid .dash-card:first-child .table-road-line.arteri {
+    background: #e53935 !important;
+}
+
+.dashboard-grid .dash-card:first-child .table-road-line.lokal {
+    background: #f1a51c !important;
+}
+
+.dashboard-grid .dash-card:first-child .table-road-line.utama {
+    background: #1769aa !important;
+}
+
+.dashboard-grid .dash-card:first-child .table-road-line.kecil {
+    background: #333333 !important;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 850px) {
+
+    .dashboard-grid .dash-card:first-child .road-table {
+        font-size: 8px !important;
+    }
+
+    .dashboard-grid .dash-card:first-child .road-table tbody td {
+        font-size: 8px !important;
+        padding: 6px !important;
+    }
+
+    .dashboard-grid .dash-card:first-child .road-table thead th {
+        font-size: 7px !important;
+    }
+}
+
+/* =========================================================
+   POINT LAYER - SIDEBAR KIRI
+   ========================================================= */
+
+.point.pedestrian {
+    background: #e53935 !important;
+}
+
+.point.terminal {
+    background: #35a66f !important;
+}
+
+.point.stasiun {
+    background: #1769aa !important;
+}
+
+.point.halte {
+    background: #9a4dcc !important;
+}
+
+/* ============================================================
+   REVISI POPUP FASILITAS - TIDAK TERPOTONG
+   ============================================================ */
+
+/* Popup Leaflet */
+.leaflet-popup {
+    max-width: none !important;
+}
+
+/* Wrapper popup */
+.leaflet-popup-content-wrapper {
+    width: 330px !important;
+    max-width: 330px !important;
+
+    padding: 0 !important;
+    margin: 0 !important;
+
+    border-radius: 12px !important;
+    overflow: hidden !important;
+
+    background: #ffffff !important;
+
+    box-shadow:
+        0 5px 18px rgba(0, 0, 0, 0.22) !important;
+}
+
+/* Isi popup */
+.leaflet-popup-content {
+    width: 330px !important;
+    max-width: 330px !important;
+
+    min-width: 0 !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    font-size: 11px !important;
+    line-height: 1.5 !important;
+
+    word-wrap: break-word !important;
+    overflow-wrap: break-word !important;
+}
+
+/* Kartu fasilitas */
+.facility-popup {
+    width: 330px !important;
+    max-width: 330px !important;
+
+    background: #ffffff;
+
+    border-radius: 12px;
+
+    overflow: hidden;
+
+    box-sizing: border-box;
+
+    color: #172b4d;
+}
+
+/* Judul */
+.facility-popup-title {
+    padding: 10px 13px 8px;
+
+    font-size: 18px !important;
+
+    font-weight: 700;
+
+    line-height: 1.25;
+
+    text-align: center;
+
+    color: #07325b;
+
+    background: #ffffff;
+}
+
+/* FOTO - TIDAK DIPOTONG */
+.facility-popup-image {
+    display: block !important;
+
+    width: 100% !important;
+
+    height: auto !important;
+
+    max-width: 100% !important;
+
+    max-height: 200px !important;
+
+    object-fit: contain !important;
+
+    object-position: center !important;
+
+    border: none !important;
+
+    border-radius: 0 !important;
+
+    margin: 0 !important;
+
+    padding: 0 !important;
+
+    background: #ffffff;
+}
+
+/* Sumber foto */
+.facility-popup-source {
+    padding: 7px 13px 8px;
+
+    font-size: 10px !important;
+
+    line-height: 1.4;
+
+    color: #777777;
+
+    background: #ffffff;
+
+    border-bottom:
+        1px solid #eeeeee;
+}
+
+.facility-popup-source span {
+    color: #1769aa;
+}
+
+/* Bagian informasi */
+.facility-popup-info {
+    padding: 9px 13px 11px;
+
+    background: #ffffff;
+}
+
+/* Baris informasi */
+.facility-popup-row {
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 8px;
+
+    margin-bottom: 7px;
+
+    line-height: 1.4;
+}
+
+.facility-popup-row:last-child {
+    margin-bottom: 0;
+}
+
+/* Label */
+.facility-popup-row span {
+    width: 60px;
+    flex-shrink: 0;
+
+    color: #777777;
+
+    font-size: 11px !important;
+}
+
+/* Nilai */
+.facility-popup-row b {
+    flex: 1;
+    min-width: 0;
+
+    color: #333333;
+
+    font-size: 11px !important;
+
+    font-weight: 500;
+
+    word-break: break-word;
+
+    line-height: 1.5;
+}
+
+/* Panah popup */
+.leaflet-popup-tip {
+    width: 9px !important;
+    height: 9px !important;
+
+    background: #ffffff !important;
+}
+
+/* Tombol close */
+.leaflet-popup-close-button {
+    font-size: 18px !important;
+
+    width: 20px !important;
+    height: 20px !important;
+
+    line-height: 20px !important;
+
+    color: #555555 !important;
+}
+/* ============================================================
+   MINI MAP ANALISIS - LANGSUNG TERLIHAT
+   ============================================================ */
+
+.analysis-map {
+    position: relative;
+
+    width: calc(100% - 20px);
+
+    height: 105px;
+
+    margin: 0 10px 10px;
+
+    overflow: hidden;
+
+    border: 1px solid #e1e5e8;
+
+    border-radius: 6px;
+
+    background: #eef2ef;
+}
+
+
+.analysis-mini-map {
+    width: 100%;
+    height: 100%;
+}
+
+
+.analysis-mini-map .leaflet-control-zoom {
+    margin: 5px;
+}
+
+
+.analysis-mini-map .leaflet-control-zoom a {
+    width: 20px;
+    height: 20px;
+
+    line-height: 18px;
+
+    font-size: 12px;
+}
+
+
+.analysis-mini-map .leaflet-control-attribution {
+    font-size: 6px;
+
+    padding: 1px 3px;
+}
+
+/* ============================================================
+   POPUP FASILITAS TRANSPORTASI
+   ============================================================ */
+
+/* Hilangkan tombol X bawaan Leaflet */
+.leaflet-popup-close-button {
+    display: none !important;
+}
+/* Hilangkan padding bawaan Leaflet */
+.leaflet-popup-content {
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 330px !important;
+    max-width: 330px !important;
+}
+
+/* Popup utama */
+.facility-popup {
+    width: 330px;
+    background: #ffffff;
+    border-radius: 12px;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+    color: #172b4d;
+}
+
+/* Judul */
+.facility-popup-title {
+    padding: 10px 13px 8px;
+    font-size: 15px;
+    font-weight: 700;
+    color: #0b3b66;
+    background: #ffffff;
+    line-height: 1.25;
+}
+
+/* Foto */
+.facility-popup-image {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: 200px;
+    object-fit: contain;
+    object-position: center;
+    border-radius: 8px;
+    margin: 0;
+    background: #ffffff;
+}
+
+/* Sumber foto */
+.facility-popup-source {
+    padding: 5px 12px 7px;
+    font-size: 9px;
+    color: #777;
+    background: #ffffff;
+    border-bottom: 1px solid #eeeeee;
+}
+
+.facility-popup-source a {
+    color: #4d6f91;
+    text-decoration: none;
+}
+
+.facility-popup-source a:hover {
+    text-decoration: underline;
+}
+
+/* Informasi */
+.facility-popup-info {
+    padding: 9px 13px 11px;
+    background: #ffffff;
+}
+
+.facility-popup-row {
+    margin-bottom: 7px;
+    line-height: 1.35;
+}
+
+.facility-popup-row:last-child {
+    margin-bottom: 0;
+}
+
+.facility-popup-label {
+    font-size: 9px;
+    color: #777;
+    margin-bottom: 1px;
+}
+
+.facility-popup-value {
+    font-size: 10px;
+    color: #222;
+    font-weight: 500;
+}
+
+/* Koordinat */
+.facility-popup-coordinate {
+    font-size: 9px;
+    color: #555;
+    line-height: 1.4;
+}
+
+/* Panah popup */
+.leaflet-popup-tip {
+    background: #ffffff !important;
+}
+
+/* ============================================================
+   POPUP FASILITAS TRANSPORTASI
+   ============================================================ */
+
+.facility-popup {
+    width: 300px;
+    max-width: 300px;
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+
+/* JUDUL POPUP */
+.facility-popup-title {
+    font-size: 20px;
+    font-weight: 700;
+    text-align: center;
+    line-height: 1.25;
+
+    padding: 4px 10px 10px 10px;
+
+    color: #0b3d6e;
+}
+
+
+/* FOTO */
+.facility-popup-image {
+    display: block;
+
+    width: 100%;
+    height: 165px;
+
+    object-fit: cover;
+
+    border-radius: 6px;
+
+    margin: 0 auto 8px auto;
+}
+
+
+/* SUMBER FOTO */
+.facility-popup-source {
+    font-size: 12px;
+    color: #777;
+
+    padding: 0 4px 8px 4px;
+
+    border-bottom: 1px solid #ddd;
+}
+
+.facility-popup-source span {
+    color: #0066cc;
+    font-weight: 600;
+}
+
+
+/* BARIS INFORMASI */
+.facility-popup-row {
+    display: grid;
+
+    grid-template-columns: 75px 1fr;
+
+    gap: 3px;
+
+    padding: 7px 4px;
+
+    font-size: 18px;
+
+    border-bottom: 1px solid #eee;
+}
+
+
+/* LABEL */
+.facility-popup-label {
+    font-weight: 600;
+    color: #555;
+}
+
+
+/* ISI */
+.facility-popup-value {
+    color: #333;
+
+    line-height: 1.4;
+
+    word-break: break-word;
+}
+
+/* =========================================================
+   DASHBOARD BAWAH — UKURAN LAPTOP
+   PANEL FULL, TIDAK KEPOTONG
+   ========================================================= */
+    /* =========================
+       HEADER PANEL
+       ========================= */
+
+    .dash-header {
+        flex: 0 0 29px !important;
+        height: 29px !important;
+        min-height: 29px !important;
+
+        padding: 7px 10px !important;
+
+        font-size: 8px !important;
+    }
+
+
+    /* =========================
+       PANEL STATISTIK JALAN
+       ========================= */
+
+    .road-table-wrapper {
+        flex: 1 !important;
+        min-height: 0 !important;
+
+        padding: 5px 9px 6px !important;
+
+        overflow: hidden !important;
+    }
+
+    .road-table {
+        width: 100% !important;
+        border-collapse: collapse !important;
+    }
+
+    .road-table thead th,
+    .road-table th {
+        padding: 4px 5px !important;
+        height: 23px !important;
+
+        font-size: 7.5px !important;
+    }
+
+    .road-table tbody td {
+        padding: 4px 5px !important;
+        height: 24px !important;
+
+        font-size: 7.5px !important;
+    }
+
+    .road-table tfoot td {
+        padding: 4px 5px !important;
+        height: 25px !important;
+
+        font-size: 7.5px !important;
+        font-weight: 700 !important;
+    }
+
+
+    /* =========================
+       PANEL PERSEBARAN TITIK
+       ========================= */
+
+    .facility-summary {
+        flex: 1 !important;
+        min-height: 0 !important;
+
+        height: auto !important;
+
+        padding: 6px 9px !important;
+
+        overflow: hidden !important;
+    }
+
+    .facility-counts {
+        height: 48px !important;
+        min-height: 48px !important;
+
+        gap: 5px !important;
+    }
+
+    .facility-count {
+        padding: 4px !important;
+        min-height: 42px !important;
+    }
+
+    .facility-count strong {
+        font-size: 9px !important;
+    }
+
+    .facility-count small {
+        font-size: 6px !important;
+        line-height: 1.1 !important;
+    }
+
+    .facility-list {
+        height: 86px !important;
+        max-height: 86px !important;
+
+        overflow-y: auto !important;
+        overflow-x: hidden !important;
+
+        margin-top: 2px !important;
+    }
+
+    .facility-list-item {
+        min-height: 24px !important;
+        height: 24px !important;
+
+        padding: 3px 5px !important;
+
+        font-size: 7.5px !important;
+    }
+
+
+    /* =========================
+       PANEL ANALISIS SPASIAL
+       ========================= */
+
+    .analysis-panel,
+    .analysis-content {
+        flex: 1 !important;
+        min-height: 0 !important;
+    }
+
+    .analysis-controls {
+        padding: 6px 9px !important;
+    }
+
+    .analysis-select {
+        height: 27px !important;
+        min-height: 27px !important;
+
+        font-size: 7.5px !important;
+    }
+
+    .analysis-info {
+        height: 34px !important;
+        min-height: 34px !important;
+
+        margin-top: 5px !important;
+    }
+
+    .analysis-info-item {
+        padding: 4px 7px !important;
+    }
+
+    .analysis-info-item small {
+        font-size: 6px !important;
+    }
+
+    .analysis-info-item strong {
+        font-size: 7px !important;
+    }
+
+    .analysis-map {
+        height: 72px !important;
+        min-height: 72px !important;
+
+        margin-top: 5px !important;
+    }
+
+/* =========================================================
+   RESPONSIVE DASHBOARD - LAPTOP & HP
+   ========================================================= */
+
+/* PANEL BAWAH */
+.dashboard-grid {
+    width: 100% !important;
+    height: auto !important;
+    min-height: 0 !important;
+
+    display: grid !important;
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+
+    gap: 10px !important;
+    margin-top: 0 !important;
+    padding: 0 !important;
+    align-items: stretch !important;
+}
+
+/* SEMUA PANEL DASHBOARD */
+.dashboard-grid > .panel {
+    height: auto !important;
+    min-height: 0 !important;
+    overflow: hidden !important;
+}
+
+/* ISI PANEL STATISTIK */
+.dashboard-grid .table-container {
+    height: auto !important;
+    max-height: none !important;
+    overflow: visible !important;
+}
+
+/* TABEL STATISTIK JANGAN DIPOTONG */
+.dashboard-grid table {
+    width: 100% !important;
+    height: auto !important;
+}
+
+.dashboard-grid tbody {
+    height: auto !important;
+}
+
+.dashboard-grid tr {
+    height: auto !important;
+}
+
+/* =========================================================
+   LAPTOP / DESKTOP
+   ========================================================= */
+
+@media (min-width: 769px) {
+
+    .dashboard-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    }
+
+    .dashboard-grid > .panel {
+        min-height: 245px !important;
+    }
+
+}
+
+/* =========================================================
+   HP
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+    .dashboard-grid {
+        display: grid !important;
+
+        /* PANEL JADI 1 KOLOM */
+        grid-template-columns: 1fr !important;
+
+        width: 100% !important;
+        height: auto !important;
+
+        gap: 10px !important;
+        margin: 0 !important;
+    }
+
+    .dashboard-grid > .panel {
+        width: 100% !important;
+        min-height: 240px !important;
+        height: auto !important;
+    }
+
+    /* Statistik tetap menampilkan seluruh tabel */
+    .dashboard-grid .table-container {
+        height: auto !important;
+        max-height: none !important;
+        overflow-x: auto !important;
+        overflow-y: visible !important;
+    }
+
+    .dashboard-grid table {
+        min-width: 100% !important;
+    }
+
+}
+
+
+/* =========================================================
+   HP KECIL
+   ========================================================= */
+
+@media (max-width: 480px) {
+
+    .dashboard-grid {
+        grid-template-columns: 1fr !important;
+        gap: 8px !important;
+    }
+
+    .dashboard-grid > .panel {
+        min-height: 230px !important;
+    }
+
+}
+
+/* =========================================================
+   PANEL BAWAH - RAPAT KE MAP
+   ========================================================= */
+
+.dashboard-grid {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+
+    width: 100% !important;
+
+    display: grid !important;
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+
+    gap: 10px !important;
+}
+
+/* Hilangkan jarak bawah area peta */
+.main-grid {
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+}
+
+/* Pastikan map berhenti tepat sebelum dashboard */
+.main-grid > .map-panel {
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+}
+
+/* Panel dashboard langsung menempel */
+.dashboard-grid {
+    position: relative;
+    top: 0 !important;
+}
+
+/* =====================================================
+   FIX PANEL BAWAH - TAMPIL FULL
+   ===================================================== */
+
+/* Area 3 panel bawah */
+.bottom-panels {
+    display: grid;
+    grid-template-columns: 1.05fr 1fr 1fr;
+    gap: 10px;
+    align-items: stretch;
+    height: auto !important;
+    min-height: 0 !important;
+}
+
+/* Semua panel bawah */
+.bottom-panel {
+    height: auto !important;
+    min-height: 0 !important;
+    max-height: none !important;
+    overflow: visible !important;
+}
+
+/* Statistik jalan HARUS FULL */
+#statisticsPanel,
+.statistics-panel {
+    height: auto !important;
+    min-height: 0 !important;
+    max-height: none !important;
+    overflow: visible !important;
+}
+
+/* Isi statistik jangan dipotong */
+#statisticsPanel .panel-content,
+.statistics-panel .panel-content {
+    height: auto !important;
+    max-height: none !important;
+    overflow: visible !important;
+}
+
+/* Tabel statistik tampil sampai TOTAL */
+#statisticsPanel table,
+.statistics-panel table {
+    width: 100%;
+    height: auto !important;
+    border-collapse: collapse;
+}
+
+/* Jangan potong baris tabel */
+#statisticsPanel tbody,
+#statisticsPanel tr,
+.statistics-panel tbody,
+.statistics-panel tr {
+    overflow: visible !important;
+}
+
+/* Panel tengah dan kanan boleh punya scroll sendiri
+   kalau isinya memang panjang */
+#distributionPanel .panel-content,
+#analysisPanel .panel-content {
+    min-height: 0;
+}
+
+/* Desktop / laptop */
+@media (min-width: 769px) {
+    .bottom-panels {
+        grid-template-columns: 1.05fr 1fr 1fr;
+        height: auto !important;
+    }
+
+    #statisticsPanel,
+    .statistics-panel {
+        height: auto !important;
+        min-height: 300px !important;
+    }
+}
+
+/* HP */
+@media (max-width: 768px) {
+    .bottom-panels {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: auto !important;
+    }
+
+    .bottom-panel {
+        width: 100%;
+        height: auto !important;
+        max-height: none !important;
+    }
+
+    #statisticsPanel,
+    .statistics-panel {
+        min-height: auto !important;
+    }
+}
+
+/* =========================================================
+   FINAL FIX — DASHBOARD RESPONSIVE
+   Statistik jalan TIDAK BOLEH TERPOTONG
+   ========================================================= */
+
+/* ---------------------------------------------------------
+   DESKTOP / LAPTOP
+   --------------------------------------------------------- */
+@media (min-width: 769px) {
+
+    /* Panel bawah langsung setelah peta */
+    .dashboard-grid {
+        width: 100% !important;
+        display: grid !important;
+        grid-template-columns:
+            minmax(0, 1.05fr)
+            minmax(0, 1fr)
+            minmax(0, 1fr) !important;
+
+        gap: 8px !important;
+
+        margin-top: 0 !important;
+        padding: 0 !important;
+
+        height: auto !important;
+        min-height: 0 !important;
+        max-height: none !important;
+
+        align-items: stretch !important;
+    }
+
+    /* =====================================================
+       SEMUA CARD DASHBOARD
+       ===================================================== */
+    .dashboard-grid .dash-card {
+        width: 100% !important;
+
+        height: auto !important;
+        min-height: 184px !important;
+        max-height: none !important;
+
+        overflow: visible !important;
+
+        display: flex !important;
+        flex-direction: column !important;
+
+        min-width: 0 !important;
+    }
+
+
+    /* =====================================================
+       STATISTIK JARINGAN JALAN
+       ===================================================== */
+
+    .dashboard-grid .dash-card:first-child {
+        height: auto !important;
+        min-height: 184px !important;
+        max-height: none !important;
+
+        overflow: visible !important;
+    }
+
+    .road-table-wrapper {
+        width: 100% !important;
+
+        height: auto !important;
+        min-height: 0 !important;
+        max-height: none !important;
+
+        overflow: visible !important;
+
+        flex: none !important;
+
+        padding:
+            5px 9px 6px !important;
+    }
+
+    .road-table {
+        width: 100% !important;
+
+        height: auto !important;
+
+        table-layout: fixed !important;
+
+        border-collapse: collapse !important;
+    }
+
+    .road-table thead {
+        height: auto !important;
+    }
+
+    .road-table tbody {
+        height: auto !important;
+    }
+
+    .road-table tfoot {
+        height: auto !important;
+    }
+
+    .road-table tr {
+        height: auto !important;
+        min-height: 0 !important;
+    }
+
+    .road-table th {
+        height: 27px !important;
+
+        padding:
+            5px 7px !important;
+
+        font-size: 8px !important;
+    }
+
+    .road-table td {
+        height: 27px !important;
+
+        padding:
+            5px 7px !important;
+
+        font-size: 8px !important;
+    }
+
+    .road-table tfoot td {
+        height: 28px !important;
+
+        padding:
+            5px 7px !important;
+
+        font-size: 8px !important;
+
+        font-weight: 700 !important;
+    }
+
+
+    /* Kolom tabel */
+    .road-table th:first-child,
+    .road-table td:first-child {
+        width: 48% !important;
+        text-align: left !important;
+    }
+
+    .road-table th:nth-child(2),
+    .road-table td:nth-child(2) {
+        width: 24% !important;
+        text-align: center !important;
+    }
+
+    .road-table th:nth-child(3),
+    .road-table td:nth-child(3) {
+        width: 28% !important;
+        text-align: right !important;
+    }
+
+
+    /* =====================================================
+       PANEL TENGAH
+       ===================================================== */
+
+    .dashboard-grid .dash-card:nth-child(2) {
+        height: auto !important;
+        min-height: 184px !important;
+        max-height: none !important;
+
+        overflow: hidden !important;
+    }
+
+    .facility-summary {
+        height: auto !important;
+        min-height: 0 !important;
+    }
+
+    .facility-counts {
+        flex-shrink: 0 !important;
+    }
+
+    .facility-list {
+        flex: 1 1 auto !important;
+        min-height: 0 !important;
+
+        overflow-y: auto !important;
+        overflow-x: hidden !important;
+    }
+
+
+    /* =====================================================
+       PANEL ANALISIS
+       ===================================================== */
+
+    .dashboard-grid .dash-card:nth-child(3) {
+        height: auto !important;
+        min-height: 184px !important;
+        max-height: none !important;
+
+        overflow: hidden !important;
+    }
+
+    .analysis-content {
+        min-height: 0 !important;
+        height: auto !important;
+    }
+
+    .analysis-map {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+}
+
+/* =========================================================
+   HP / MOBILE
+   ========================================================= */
+@media (max-width: 768px) {
+
+    .dashboard-grid {
+        width: 100% !important;
+
+        display: grid !important;
+
+        grid-template-columns: 1fr !important;
+
+        gap: 8px !important;
+
+        margin: 0 !important;
+        padding: 0 !important;
+
+        height: auto !important;
+        min-height: 0 !important;
+        max-height: none !important;
+    }
+
+
+    /* Semua panel */
+    .dashboard-grid .dash-card {
+        width: 100% !important;
+
+        height: auto !important;
+        min-height: 0 !important;
+        max-height: none !important;
+
+        overflow: visible !important;
+
+        display: flex !important;
+        flex-direction: column !important;
+    }
+
+
+    /* =====================================================
+       STATISTIK DI HP — FULL
+       ===================================================== */
+
+    .dashboard-grid .dash-card:first-child {
+        height: auto !important;
+
+        overflow: visible !important;
+    }
+
+    .road-table-wrapper {
+        width: 100% !important;
+
+        height: auto !important;
+        max-height: none !important;
+
+        overflow-x: auto !important;
+        overflow-y: visible !important;
+
+        padding:
+            6px 8px !important;
+    }
+
+    .road-table {
+        width: 100% !important;
+
+        min-width: 0 !important;
+
+        height: auto !important;
+
+        table-layout: fixed !important;
+
+        border-collapse: collapse !important;
+    }
+
+    .road-table th {
+        height: 30px !important;
+
+        padding:
+            6px 5px !important;
+
+        font-size: 8px !important;
+    }
+
+    .road-table td {
+        height: 30px !important;
+
+        padding:
+            6px 5px !important;
+
+        font-size: 8px !important;
+    }
+
+    .road-table tfoot td {
+        height: 31px !important;
+
+        padding:
+            6px 5px !important;
+
+        font-size: 8px !important;
+    }
+
+    .road-table th:first-child,
+    .road-table td:first-child {
+        width: 46% !important;
+    }
+
+    .road-table th:nth-child(2),
+    .road-table td:nth-child(2) {
+        width: 25% !important;
+    }
+
+    .road-table th:nth-child(3),
+    .road-table td:nth-child(3) {
+        width: 29% !important;
+    }
+
+
+    /* Panel tengah */
+    .dashboard-grid .dash-card:nth-child(2) {
+        min-height: 240px !important;
+
+        overflow: hidden !important;
+    }
+
+
+    /* Panel kanan */
+    .dashboard-grid .dash-card:nth-child(3) {
+        min-height: 240px !important;
+
+        overflow: hidden !important;
+    }
+}
+
+
+/* =========================================================
+   HP KECIL
+   ========================================================= */
+@media (max-width: 480px) {
+
+    .dashboard-grid {
+        gap: 7px !important;
+    }
+
+    .road-table-wrapper {
+        padding:
+            5px 6px !important;
+    }
+
+    .road-table th,
+    .road-table td {
+        font-size: 7.5px !important;
+        padding:
+            5px 4px !important;
+    }
+
+    .road-table th {
+        height: 28px !important;
+    }
+
+    .road-table td {
+        height: 28px !important;
+    }
+
+    .road-table tfoot td {
+        height: 29px !important;
+    }
+}
+
+
+/* =========================================================
+   FIX GAP ANTARA PETA DAN PANEL BAWAH
+   ========================================================= */
+
+.main-grid {
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+}
+
+.map-panel {
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+}
+
+.dashboard-grid {
+    margin-top: 0 !important;
+}
+
+
+/* =========================================================
+   PENTING:
+   MATIKAN HEIGHT 184px DARI RULE LAMA
+   ========================================================= */
+
+.dashboard-grid .dash-card,
+.dashboard-grid .dash-card:first-child,
+.dashboard-grid .dash-card:nth-child(2),
+.dashboard-grid .dash-card:nth-child(3) {
+    max-height: none !important;
+}
+
+
+/* =========================================================
+   STATISTIK — PASTIKAN TOTAL SELALU KELIHATAN
+   ========================================================= */
+
+.dashboard-grid .dash-card:first-child .road-table-wrapper,
+.dashboard-grid .dash-card:first-child .road-table,
+.dashboard-grid .dash-card:first-child .road-table tbody,
+.dashboard-grid .dash-card:first-child .road-table tfoot {
+    overflow: visible !important;
+}
+
+
+/* =================================
+   LAYER RUTE ANGKOT - DUA KOLOM
+   ================================= */
+
+.angkot-layer-group {
+  margin-top: 12px;
+  padding-top: 10px;
+  border-top: 1px solid #e5ebf0;
+}
+
+.angkot-layer-group > h3 {
+  margin-bottom: 10px;
+}
+
+.angkot-route-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 8px;
+}
+
+.angkot-route-column {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  min-width: 0;
+}
+
+.angkot-route-column + .angkot-route-column {
+  padding-left: 8px;
+  border-left: 1px solid #e5ebf0;
+}
+
+.angkot-route-column .check-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  min-width: 0;
+  margin: 0;
+  font-size: 10px;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.angkot-route-column .check-row input {
+  flex: 0 0 13px;
+  width: 13px;
+  height: 13px;
+  margin: 0;
+  cursor: pointer;
+}
+
+.angkot-route-column .line-sample {
+  display: inline-block;
+  flex: 0 0 22px;
+  width: 22px;
+  height: 4px;
+  border-radius: 4px;
+}
+
+/* Warna tiap trayek */
+
+.rute-64  { background: #159447; }
+.rute-65  { background: #ef2929; }
+.rute-68  { background: #ff9f1a; }
+.rute-72  { background: #1687e8; }
+.rute-32  { background: #8b42e8; }
+.rute-33  { background: #874421; }
+.rute-35  { background: #ec35bd; }
+
+.rute-71  { background: #14b8b8; }
+.rute-66  { background: #82c84a; }
+.rute-38  { background: #9250f5; }
+.rute-37  { background: #f4d51c; }
+.rute-41  { background: #244cff; }
+.rute-118 { background: #444444; }
+
+/* Rapikan daftar trayek agar nama tidak terpotong */
+
+.angkot-route-grid {
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 5px;
+}
+
+.angkot-route-column + .angkot-route-column {
+  padding-left: 5px;
+  border-left: 1px solid #e5ebf0;
+}
+
+.angkot-route-column .check-row {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  min-width: 0;
+  font-size: 10px;
+  white-space: nowrap;
+}
+
+/* Hilangkan simbol garis warna di samping checkbox */
+.angkot-route-column .line-sample {
+  display: none !important;
+}
+
+/* Pastikan checkbox tidak mengecil */
+.angkot-route-column .check-row input {
+  flex: 0 0 13px;
+  width: 13px;
+  height: 13px;
+  margin: 0;
+}
+
+
+/* PANEL DETAIL TRAYEK 64 */
+.trayek-detail-panel {
+  position: absolute;
+  z-index: 1200;
+  right: 15px;
+  bottom: 15px;
+  width: min(390px, calc(100% - 30px));
+  max-height: 75%;
+  overflow-y: auto;
+  background: #fff;
+  color: #203040;
+  border: 1px solid #d9e1e8;
+  border-radius: 10px;
+  box-shadow: 0 5px 22px rgba(0, 0, 0, .22);
+}
+
+.trayek-detail-panel[hidden] {
+  display: none !important;
+}
+
+.trayek-detail-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 14px;
+  background: #07325b;
+  color: white;
+}
+
+.trayek-detail-header h2 {
+  font-size: 15px;
+  margin-bottom: 6px;
+}
+
+.trayek-detail-header p {
+  font-size: 10px;
+  line-height: 1.5;
+  color: #d8e7f5;
+}
+
+.trayek-detail-header button {
+  border: 0;
+  background: transparent;
+  color: white;
+  font-size: 24px;
+  align-self: flex-start;
+}
+
+.trayek-detail-body {
+  padding: 15px;
+  font-size: 12px;
+  line-height: 1.8;
+}
+
+.trayek-detail-body h3 {
+  margin: 12px 0 6px;
+  color: #07325b;
+}
+
+.trayek-detail-body ol {
+  padding-left: 22px;
+}
+
+.trayek-warning {
+  margin: 12px 0;
+  padding: 9px;
+  background: #edf6fc;
+  border-radius: 6px;
+  color: #365b78;
+  font-size: 10px;
+}
+
+
+/* LEGENDA TUTUPAN LAHAN */
+.tutupan-legend {
+    margin: 10px 0;
+    padding: 10px;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+}
+
+.legend-title {
+    color: #123b60;
+    font-size: 12px;
+    font-weight: 700;
+    margin-bottom: 9px;
+}
+
+.legend-items {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px 8px;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    font-size: 11px;
+    color: #334155;
+}
+
+.legend-color {
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+    border-radius: 2px;
+}
+
+
+/* ===== FIX KARTU ACCURACY & AREA RESULTS ===== */
+.accuracy-area-card {
+    position: absolute;
+    right: 12px;
+    bottom: 12px;
+    z-index: 850;
+
+    width: 320px;
+    max-width: calc(100% - 24px);
+    max-height: 280px;
+    overflow-y: auto;
+    box-sizing: border-box;
+
+    padding: 14px 16px;
+    background: rgba(255, 255, 255, 0.97);
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(18, 43, 67, 0.20);
+
+    color: #142b49;
+    font-size: 11px;
+    line-height: 1.4;
+}
+
+.accuracy-area-card[hidden] {
+    display: none !important;
+}
+
+.accuracy-area-card h2 {
+    margin: 0 0 10px;
+    padding-bottom: 9px;
+    border-bottom: 1px solid #e7edf3;
+
+    color: #123b72;
+    font-size: 15px;
+    font-weight: 800;
+    line-height: 1.25;
+}
+
+.accuracy-area-card h3 {
+    margin: 10px 0 7px;
+    color: #123b72;
+    font-size: 12px;
+    font-weight: 800;
+}
+
+.accuracy-row {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 8px;
+    margin: 4px 0;
+}
+
+.accuracy-row span {
+    color: #263b53;
+}
+
+.accuracy-row b {
+    text-align: right;
+    font-weight: 700;
+}
+
+#overallAccuracy,
+#kappaValue {
+    color: #e52b16;
+}
+
+#modelValue {
+    color: #1769aa;
+}
+
+.accuracy-divider {
+    margin: 10px 0;
+    border-top: 1px solid #d6e0e9;
+}
+
+.accuracy-area-row {
+    display: grid;
+    grid-template-columns: 14px minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 7px;
+    margin: 6px 0;
+}
+
+.accuracy-area-row .legend-color {
+    width: 14px;
+    height: 14px;
+    display: inline-block;
+    border-radius: 2px;
+}
+
+.accuracy-area-row b {
+    color: #243d5b;
+    text-align: right;
+    white-space: nowrap;
+    font-size: 10.5px;
+}
+
+.accuracy-note {
+    margin: 9px 0 0;
+    color: #718096;
+    font-size: 9px;
+}
+
+
+/* =====================================================
+   REDESAIN PANEL LAYER - TOGGLE ON/OFF
+   WebGIS Transportasi Cibinong
+   ===================================================== */
+
+/* Panel layer */
+.left-panel {
+    padding: 12px 10px;
+    background: #ffffff;
+}
+
+/* Setiap kelompok layer menjadi kartu */
+.left-panel .layer-group {
+    padding: 9px 9px 8px;
+    margin-bottom: 10px;
+    border: 1px solid #e0e8f0;
+    border-radius: 10px;
+    background: #ffffff;
+    box-shadow: 0 2px 6px rgba(7, 50, 91, 0.04);
+    transition: border-color 0.2s ease,
+                box-shadow 0.2s ease;
+}
+
+.left-panel .layer-group:hover {
+    border-color: #c9dced;
+    box-shadow: 0 3px 9px rgba(7, 50, 91, 0.07);
+}
+
+/* Judul kelompok */
+.left-panel .layer-group h3 {
+    margin-bottom: 8px;
+    color: #07325b;
+    font-size: 10px;
+    font-weight: 700;
+}
+
+/* Baris layer */
+.left-panel .check-row {
+    position: relative;
+    display: flex;
+    align-items: center;
+    min-height: 27px;
+    margin: 2px 0;
+    padding: 4px 36px 4px 2px;
+    border-radius: 6px;
+    color: #40505f;
+    font-size: 9px;
+    line-height: 1.35;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.left-panel .check-row:hover {
+    background: #f3f8fc;
+}
+
+/* Toggle switch */
+.left-panel .check-row input[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+    position: absolute;
+    right: 1px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 29px;
+    height: 17px;
+    min-width: 29px;
+    margin: 0;
+    padding: 0;
+    border: 1px solid #c7cdd3;
+    border-radius: 999px;
+    background: #cbd0d5;
+    cursor: pointer;
+    transition: background 0.2s ease,
+                border-color 0.2s ease;
+}
+
+/* Bulatan toggle */
+.left-panel .check-row input[type="checkbox"]::before {
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    background: #ffffff;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.18);
+    transition: transform 0.2s ease;
+}
+
+/* Kondisi ON */
+.left-panel .check-row input[type="checkbox"]:checked {
+    background: #2386df;
+    border-color: #2386df;
+}
+
+.left-panel .check-row input[type="checkbox"]:checked::before {
+    transform: translateX(12px);
+}
+
+/* Fokus keyboard */
+.left-panel .check-row input[type="checkbox"]:focus-visible {
+    outline: 2px solid #8cc7ff;
+    outline-offset: 2px;
+}
+
+/* Simbol garis dan titik tetap terlihat */
+.left-panel .check-row .line-sample,
+.left-panel .check-row .point,
+.left-panel .check-row .symbol {
+    flex-shrink: 0;
+    margin-right: 6px;
+}
+
+/* Batas wilayah */
+.left-panel .layer-group:first-of-type .check-row {
+    min-height: 30px;
+}
+
+/* Area daftar trayek */
+.left-panel .angkot-route-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 5px;
+}
+
+.left-panel .angkot-route-column {
+    min-width: 0;
+}
+
+.left-panel .angkot-route-column + .angkot-route-column {
+    padding-left: 6px;
+    border-left: 1px solid #e7edf2;
+}
+
+/* Nama trayek dan simbol tidak bertabrakan dengan toggle */
+.left-panel .angkot-route-column .check-row {
+    min-width: 0;
+    min-height: 27px;
+    padding-right: 34px;
+    white-space: nowrap;
+}
+
+.left-panel .angkot-route-column .line-sample {
+    width: 4px;
+    min-width: 4px;
+    height: 16px;
+    margin-right: 7px;
+    border-radius: 3px;
+}
+
+/* Tombol reset */
+.left-panel .reset-btn {
+    min-height: 34px;
+    margin-top: 1px;
+    border: 1px solid #d4e4f3;
+    border-radius: 8px;
+    background: #eef6ff;
+    color: #1769aa;
+    font-size: 9px;
+    font-weight: 700;
+    transition: background 0.2s ease,
+                transform 0.2s ease;
+}
+
+.left-panel .reset-btn:hover {
+    background: #deedfc;
+    transform: translateY(-1px);
+}
+
+/* Panel tetap nyaman pada layar sempit */
+@media (max-width: 450px) {
+    .left-panel .layer-group {
+        padding: 8px 7px;
+    }
+
+    .left-panel .check-row {
+        font-size: 8px;
+    }
+
+    .left-panel .angkot-route-column .check-row {
+        padding-right: 31px;
+    }
+
+    .left-panel .check-row input[type="checkbox"] {
+        width: 27px;
+        min-width: 27px;
+        height: 16px;
+    }
+
+    .left-panel .check-row input[type="checkbox"]:checked::before {
+        transform: translateX(10px);
+    }
+}
+
+/* Rapikan kolom trayek pada sidebar */
+.left-panel .angkot-route-grid {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    column-gap: 8px;
+}
+
+.left-panel .angkot-route-column + .angkot-route-column {
+    padding-left: 8px;
+}
+
+.left-panel .angkot-route-column .check-row {
+    font-size: 9px;
+    padding-right: 32px;
+    overflow: hidden;
+}
+
+.left-panel .angkot-route-column .check-row input[type="checkbox"] {
+    right: 0;
+}
+
+
+/* ==========================================
+   FINAL COMPACT SIDEBAR - WEBGIS CIBINONG
+   ========================================== */
+
+.left-panel {
+    padding: 8px 8px;
+    font-size: 10px;
+    line-height: 1.2;
+}
+
+/* Judul utama LAYER */
+.left-panel > h2,
+.left-panel .panel-title {
+    font-size: 11px;
+    line-height: 1.2;
+    margin: 0 0 7px;
+}
+
+/* Semua kartu layer */
+.left-panel .layer-group {
+    padding: 6px 7px;
+    margin-bottom: 6px;
+    border-radius: 9px;
+    box-shadow: 0 1px 4px rgba(7, 50, 91, 0.04);
+}
+
+/* Judul kelompok: Batas Wilayah, Jaringan Jalan, dll. */
+.left-panel .layer-group h3 {
+    font-size: 10px;
+    line-height: 1.2;
+    margin: 0 0 5px;
+    font-weight: 700;
+}
+
+/* Semua baris checkbox */
+.left-panel .check-row {
+    min-height: 23px;
+    height: auto;
+    margin: 0;
+    padding: 3px 33px 3px 1px;
+    font-size: 9px;
+    line-height: 1.2;
+    gap: 4px;
+}
+
+/* Toggle dibuat sedikit lebih kecil */
+.left-panel .check-row input[type="checkbox"] {
+    width: 27px;
+    min-width: 27px;
+    height: 15px;
+    right: 0;
+}
+
+.left-panel .check-row input[type="checkbox"]::before {
+    width: 9px;
+    height: 9px;
+    top: 2px;
+    left: 2px;
+}
+
+.left-panel .check-row input[type="checkbox"]:checked::before {
+    transform: translateX(11px);
+}
+
+/* Sampel simbol jalan */
+.left-panel .check-row .line-sample {
+    flex-shrink: 0;
+    margin-right: 4px;
+}
+
+/* Jarak kelompok sarana transportasi */
+.left-panel .layer-group .check-row + .check-row {
+    margin-top: 0;
+}
+
+/* Daftar trayek: dua kolom rapat */
+.left-panel .angkot-route-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    column-gap: 5px;
+    row-gap: 0;
+    align-items: start;
+}
+
+.left-panel .angkot-route-column {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    min-width: 0;
+}
+
+.left-panel .angkot-route-column + .angkot-route-column {
+    padding-left: 5px;
+    border-left: 1px solid #e7edf2;
+}
+
+.left-panel .angkot-route-column .check-row {
+    min-width: 0;
+    min-height: 25px;
+    height: 25px;
+    padding: 2px 29px 2px 1px;
+    font-size: 9px;
+    line-height: 1.1;
+    white-space: nowrap;
+}
+
+.left-panel .angkot-route-column .line-sample {
+    width: 3px;
+    min-width: 3px;
+    height: 13px;
+    margin-right: 4px;
+}
+
+/* Tombol reset */
+.left-panel .reset-btn {
+    min-height: 30px;
+    height: 30px;
+    margin-top: 0;
+    padding: 5px 8px;
+    font-size: 9px;
+    line-height: 1.2;
+    border-radius: 7px;
+}
+
+/* Hilangkan margin berlebih pada teks di sidebar */
+.left-panel p {
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+
+/* Hindari teks panjang memperlebar sidebar */
+.left-panel .check-row label,
+.left-panel .check-row span {
+    min-width: 0;
+}
+
+/* Sidebar tetap rapi pada layar sempit */
+@media (max-width: 450px) {
+    .left-panel {
+        padding: 6px;
+    }
+
+    .left-panel .layer-group {
+        padding: 5px 6px;
+        margin-bottom: 5px;
+    }
+
+    .left-panel .angkot-route-column .check-row {
+        font-size: 8px;
+        padding-right: 27px;
+    }
+}
+
+/* Tombol buka/tutup sidebar */
+#toggleSidebar {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    z-index: 1500;
+    width: 34px;
+    height: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #ffffff;
+    color: #07325b;
+    border: 1px solid #dbe5ef;
+    border-radius: 8px;
+    box-shadow: 0 2px 7px rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+}
+
+#toggleSidebar:hover {
+    background: #07325b;
+    color: #ffffff;
+}
+
+/* Sidebar dalam kondisi tertutup */
+.main-grid.sidebar-collapsed {
+    grid-template-columns: 0 minmax(0, 1fr) 205px;
+}
+
+.main-grid.sidebar-collapsed .left-panel {
+    display: none;
+}
+
+/* Peta mengisi ruang yang tersedia */
+.main-grid #map {
+    width: 100%;
+    transition: width 0.25s ease;
+}
+
+
+/* =========================================
+   SIMBOL TITIK AWAL DAN AKHIR TRAYEK
+========================================= */
+
+.penanda-rute {
+    width: 38px;
+    height: 46px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    background: transparent;
+    border: none;
+}
+
+.penanda-rute .pin {
+    width: 34px;
+    height: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid #ffffff;
+    border-radius: 50% 50% 50% 6px;
+    transform: rotate(-45deg);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+.penanda-rute .simbol {
+    color: #ffffff;
+    font-size: 17px;
+    font-weight: 800;
+    line-height: 1;
+    transform: rotate(45deg);
+}
+
+.penanda-awal .pin {
+    background: #16a34a;
+}
+
+.penanda-akhir .pin {
+    background: #ef4444;
+}
+
+.penanda-rute .pin {
+    transition: transform 0.2s ease;
+}
+
+.penanda-rute:hover .pin {
+    transform: rotate(-45deg) scale(1.12);
+}
+
+.legenda-penanda-rute {
+    margin-top: 10px;
+    padding: 10px;
+    border: 1px solid #dbe5ef;
+    border-radius: 10px;
+    background: #ffffff;
+}
+
+.legenda-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 5px 0;
+}
+
+.legenda-pin {
+    width: 28px;
+    height: 28px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 50%;
+}
+
+.legenda-pin.awal {
+    background: #16a34a;
+}
+
+.legenda-pin.akhir {
+    background: #ef4444;
+}
+
+.legenda-item strong {
+    display: block;
+    font-size: 11px;
+    color: #12365b;
+}
+
+.legenda-item small {
+    display: block;
+    font-size: 10px;
+    color: #64748b;
+}
+
+/* =========================================
+   REVISI DASHBOARD - TINGGI KARTU SERAGAM
+   ========================================= */
+
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 10px;
+    align-items: stretch;
+}
+
+.dashboard-grid > .dash-card {
+    height: 260px;
+    min-height: 260px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Kartu statistik: tabel dapat di-scroll */
+.dash-card .road-table-wrapper {
+    flex: 1;
+    min-height: 0;
+    overflow: auto;
+}
+
+/* Kartu persebaran titik */
+.dash-card .facility-summary {
+    flex-shrink: 0;
+}
+
+.dash-card .facility-category-grid {
+    flex-shrink: 0;
+}
+
+.dash-card .facility-list {
+    flex: 1;
+    min-height: 0;
+    max-height: none;
+    overflow-y: auto;
+}
+
+/* Kartu analisis spasial */
+.dash-card #analysisSelect {
+    flex-shrink: 0;
+}
+
+.dash-card .analysis-result {
+    flex-shrink: 0;
+}
+
+.dash-card .analysis-map {
+    flex: 1;
+    min-height: 80px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+/* Responsif untuk layar kecil */
+@media (max-width: 700px) {
+    .dashboard-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .dashboard-grid > .dash-card {
+        height: 260px;
+        min-height: 260px;
+    }
+}
+
+/* ==========================================
+   FIX DASHBOARD — STATISTIK JADI PATOKAN
+   ========================================== */
+
+@media (min-width: 769px) {
+
+    /* Ketiga panel mengikuti tinggi panel Statistik */
+    .dashboard-grid {
+        display: grid !important;
+        grid-template-columns: 1.05fr 1fr 1fr !important;
+        align-items: stretch !important;
+    }
+
+    .dashboard-grid > .dash-card {
+        height: 100% !important;
+        min-height: 0 !important;
+        max-height: none !important;
+        min-width: 0 !important;
+        box-sizing: border-box !important;
+        overflow: hidden !important;
+        display: flex !important;
+        flex-direction: column !important;
+    }
+
+    /* Statistik: tinggi alami tabel menjadi acuan baris grid */
+    .dashboard-grid > .dash-card:first-child {
+        height: auto !important;
+        min-height: 0 !important;
+        overflow: hidden !important;
+    }
+
+    .dashboard-grid > .dash-card:first-child .road-table-wrapper {
+        flex: 0 0 auto !important;
+        height: auto !important;
+        max-height: none !important;
+        overflow: visible !important;
+    }
+
+    /* Persebaran Titik: ringkasan tetap di atas */
+    .dashboard-grid > .dash-card:nth-child(2) {
+        min-height: 0 !important;
+        overflow: hidden !important;
+    }
+
+    .dashboard-grid > .dash-card:nth-child(2) .facility-summary {
+        display: flex !important;
+        flex-direction: column !important;
+        flex: 1 1 auto !important;
+        min-height: 0 !important;
+        overflow: hidden !important;
+    }
+
+    .dashboard-grid > .dash-card:nth-child(2) .facility-counts,
+    .dashboard-grid > .dash-card:nth-child(2) .facility-category-grid {
+        flex: 0 0 auto !important;
+    }
+
+    .dashboard-grid > .dash-card:nth-child(2) .facility-list {
+        flex: 1 1 0 !important;
+        height: auto !important;
+        min-height: 0 !important;
+        max-height: none !important;
+        overflow-y: auto !important;
+        overflow-x: hidden !important;
+    }
+
+    /* Analisis Spasial: tidak boleh memperbesar panel */
+    .dashboard-grid > .dash-card:nth-child(3) {
+        min-height: 0 !important;
+        overflow: hidden !important;
+    }
+
+    .dashboard-grid > .dash-card:nth-child(3) .analysis-map {
+        flex: 1 1 auto !important;
+        min-height: 80px !important;
+        height: auto !important;
+        max-height: 100% !important;
+    }
+}
+
+
+/* =========================================
+   REVISI FONT SIDEBAR KANAN
+   ========================================= */
+
+/* Judul panel */
+.right-panel .panel-title {
+  font-size: 11px;
+}
+
+/* Nama Kecamatan Cibinong */
+.right-panel .region-name {
+  font-size: 14px;
+  line-height: 1.35;
+}
+
+/* Lokasi wilayah */
+.right-panel .region-location {
+  font-size: 9px;
+  line-height: 1.4;
+}
+
+/* Deskripsi wilayah */
+.right-panel .region-description {
+  font-size: 9px;
+  line-height: 1.6;
+}
+
+/* Informasi dasar wilayah */
+.right-panel .region-basic-info > div {
+  font-size: 9px;
+  line-height: 1.4;
+}
+
+/* Nilai informasi dasar */
+.right-panel .region-basic-info strong {
+  font-size: 9px;
+}
+
+/* Judul sumber data */
+.right-panel .region-info-card .info-card h3 {
+  font-size: 10px;
+}
+
+/* Baris sumber data */
+.right-panel .region-info-card .info-row {
+  font-size: 9px;
+  line-height: 1.4;
+}
+
+/* Nilai sumber data */
+.right-panel .region-info-card .info-row b {
+  font-size: 9px;
+}
+
+/* Judul petunjuk penggunaan */
+.right-panel .help-card h3 {
+  font-size: 9px;
+}
+
+/* Isi petunjuk penggunaan */
+.right-panel .help-card p {
+  font-size: 8px;
+  line-height: 1.6;
+}
+
+/* =========================================
+   PERBESAR FONT FOOTER WEBGIS
+   ========================================= */
+
+.main-footer .creator-detail h3 {
+    font-size: 14px !important;
+    line-height: 1.4;
+    margin-bottom: 5px;
+}
+
+.main-footer .creator-detail p {
+    font-size: 11px !important;
+    line-height: 1.5;
+    margin-bottom: 4px;
+}
+
+.main-footer .creator-detail .creator-description {
+    font-size: 10px !important;
+    line-height: 1.5 !important;
+    max-width: 360px;
+}
+
+.main-footer .university-text {
+    font-size: 9px !important;
+    line-height: 1.6;
+}
+
+.main-footer .university-text .year {
+    font-size: 10px !important;
+    margin-top: 4px;
+}
+
+.main-footer .footer-bottom {
+    font-size: 9px;
+    line-height: 1.5;
+}
+
+/* Beri ruang agar teks tetap nyaman dibaca */
+.main-footer .footer-content {
+    padding: 20px 22px;
+    gap: 20px;
+}
+
+.main-footer .creator-card {
+    gap: 12px;
+}
+
+.main-footer .university-section {
+    gap: 12px;
+}
+
+/* =========================================
+   LEGENDA TUTUPAN LAHAN DI MINI MAP
+   ========================================= */
+
+.analysis-map {
+    position: relative;
+    overflow: hidden;
+}
+
+.analysis-mini-map {
+    width: 100%;
+    height: 100%;
+}
+
+.tutupan-legend {
+    position: absolute;
+    z-index: 1000;
+    left: 8px;
+    bottom: 8px;
+    padding: 9px 11px;
+    background: rgba(255, 255, 255, 0.96);
+    border: 1px solid #d9e1e8;
+    border-radius: 6px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.tutupan-legend .legend-title {
+    margin-bottom: 7px;
+    color: #07325b;
+    font-size: 10px;
+    font-weight: 800;
+}
+
+.tutupan-legend .legend-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin: 5px 0;
+    color: #334455;
+    font-size: 9px;
+}
+
+.tutupan-legend .legend-color {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    flex-shrink: 0;
+    border-radius: 2px;
+}
+/* Popup simbol awal dan akhir trayek */
+.leaflet-popup-content-wrapper {
+    border-radius: 8px !important;
+}
+
+.leaflet-popup-content {
+    margin: 7px 10px !important;
+    width: auto !important;
+    min-width: 0 !important;
+    max-width: 150px !important;
+    font-size: 11px;
+    line-height: 1.4;
+}
+
+.leaflet-popup-tip {
+    width: 10px;
+    height: 10px;
+}
+
+/* =========================================================
+   POPUP FASILITAS — DESAIN FINAL
+   ========================================================= */
+
+/* Ukuran dan bingkai popup */
+.leaflet-popup.facility-popup-container {
+    max-width: 380px !important;
+}
+
+.leaflet-popup-content-wrapper {
+    padding: 0 !important;
+    overflow: hidden !important;
+    border-radius: 16px !important;
+    background: #fff !important;
+    box-shadow: 0 8px 28px rgba(20, 40, 60, 0.22) !important;
+}
+
+.leaflet-popup-content {
+    width: 350px !important;
+    max-width: calc(100vw - 60px) !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.45 !important;
+    white-space: normal !important;
+}
+
+.facility-popup {
+    width: 100%;
+    overflow: hidden;
+    border-radius: 16px;
+    color: #183653;
+    background: #fff;
+}
+
+/* Foto utama */
+.facility-popup-hero {
+    position: relative;
+    width: 100%;
+    height: 220px;
+    overflow: hidden;
+    background: #e9eef3;
+}
+
+.facility-popup-image {
+    display: block !important;
+    width: 100% !important;
+    height: 100% !important;
+    max-height: none !important;
+    object-fit: cover !important;
+    object-position: center !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    margin: 0 !important;
+}
+
+/* Lapisan gelap di bawah foto untuk judul */
+.facility-popup-overlay {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 38px 16px 13px;
+    color: #fff;
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0),
+        rgba(0, 0, 0, 0.78)
+    );
+}
+
+.facility-popup-title {
+    padding: 0 !important;
+    margin: 0 28px 7px 0;
+    color: #fff !important;
+    background: transparent !important;
+    font-size: 19px !important;
+    font-weight: 700;
+    line-height: 1.25;
+    text-align: left !important;
+    overflow-wrap: anywhere;
+}
+
+/* Kredit sumber foto */
+.facility-popup-source {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 5px;
+    padding: 0 !important;
+    margin: 0;
+    border: 0 !important;
+    color: rgba(255, 255, 255, 0.9) !important;
+    background: transparent !important;
+    font-size: 11px !important;
+    line-height: 1.5;
+}
+
+.facility-popup-source i {
+    margin-right: 3px;
+    font-size: 15px;
+}
+
+.facility-popup-source a,
+.facility-popup-source span {
+    color: #fff !important;
+    overflow-wrap: anywhere;
+}
+
+.facility-popup-source a {
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
+
+/* Tampilan jika foto tidak tersedia */
+.facility-popup-no-photo {
+    padding: 18px 16px;
+    background: #173c5d;
+}
+
+.facility-popup-no-photo .facility-popup-title {
+    margin: 0 25px 8px 0;
+}
+
+/* Bagian informasi putih */
+.facility-popup-info {
+    padding: 12px 15px 14px !important;
+    background: #fff !important;
+}
+
+.facility-popup-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    margin: 0 !important;
+    padding: 12px 0;
+    border-bottom: 1px solid #e8edf2;
+    line-height: 1.45;
+}
+
+.facility-popup-row:last-child {
+    border-bottom: 0;
+    padding-bottom: 2px;
+}
+
+/* Ikon detail */
+.facility-popup-icon {
+    display: flex;
+    flex: 0 0 42px;
+    width: 42px;
+    height: 42px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 18px;
+}
+
+.facility-popup-icon.pedestrian {
+    color: #e53935;
+    background: #ffeded;
+}
+
+.facility-popup-icon.location {
+    color: #1769aa;
+    background: #e8f2ff;
+}
+
+.facility-popup-icon.coordinates {
+    color: #1769aa;
+    background: #e8f2ff;
+}
+
+/* Label dan nilai detail */
+.facility-popup-detail {
+    display: flex;
+    flex: 1;
+    min-width: 0;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.facility-popup-detail span {
+    width: auto !important;
+    color: #7b8da0 !important;
+    font-size: 12px !important;
+}
+
+.facility-popup-detail b {
+    display: block;
+    min-width: 0;
+    color: #183653 !important;
+    font-size: 13px !important;
+    font-weight: 600 !important;
+    line-height: 1.5;
+    text-align: left !important;
+    overflow-wrap: anywhere;
+    word-break: normal;
+}
+
+/* Tombol X */
+.leaflet-popup-close-button {
+    z-index: 1000 !important;
+    top: 10px !important;
+    right: 10px !important;
+    display: flex !important;
+    width: 34px !important;
+    height: 34px !important;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid rgba(255, 255, 255, 0.85) !important;
+    border-radius: 50% !important;
+    color: #173c5d !important;
+    background: #fff !important;
+    font-size: 23px !important;
+    font-weight: 400 !important;
+    line-height: 30px !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.18);
+}
+
+.leaflet-popup-close-button:hover {
+    color: #e53935 !important;
+    background: #f5f8fb !important;
+}
+
+/* Ujung popup */
+.leaflet-popup-tip {
+    background: #fff !important;
+}
+
+/* Responsif untuk layar kecil */
+@media (max-width: 480px) {
+    .leaflet-popup-content {
+        width: calc(100vw - 60px) !important;
+        max-width: calc(100vw - 60px) !important;
+    }
+
+    .facility-popup-hero {
+        height: 190px;
+    }
+
+    .facility-popup-title {
+        font-size: 17px !important;
+    }
+}
+
+/* =========================================================
+   REVISI UKURAN POPUP FASILITAS — LEBIH COMPACT
+   ========================================================= */
+
+/* Lebar keseluruhan popup */
+.leaflet-popup-content {
+    width: 290px !important;
+    max-width: calc(100vw - 70px) !important;
+}
+
+/* Kartu popup */
+.facility-popup {
+    width: 100% !important;
+    max-width: 290px !important;
+    border-radius: 13px !important;
+}
+
+/* Foto dibuat lebih pendek */
+.facility-popup-hero {
+    height: 165px !important;
+}
+
+/* Judul lokasi */
+.facility-popup-title {
+    font-size: 16px !important;
+    line-height: 1.25 !important;
+    margin-bottom: 5px !important;
+}
+
+/* Sumber foto */
+.facility-popup-source {
+    font-size: 10px !important;
+    gap: 4px !important;
+}
+
+/* Bagian detail */
+.facility-popup-info {
+    padding: 8px 11px 10px !important;
+}
+
+/* Setiap baris detail */
+.facility-popup-row {
+    gap: 9px !important;
+    padding: 9px 0 !important;
+}
+
+/* Ikon diperkecil */
+.facility-popup-icon {
+    flex: 0 0 34px !important;
+    width: 34px !important;
+    height: 34px !important;
+    font-size: 15px !important;
+}
+
+/* Tulisan jenis, alamat, koordinat */
+.facility-popup-detail span {
+    font-size: 11px !important;
+}
+
+.facility-popup-detail b {
+    font-size: 12px !important;
+    line-height: 1.4 !important;
+}
+
+/* Tombol tutup */
+.leaflet-popup-close-button {
+    width: 29px !important;
+    height: 29px !important;
+    font-size: 20px !important;
+    line-height: 25px !important;
+}
+
+/* Tampilan layar kecil */
+@media (max-width: 480px) {
+    .leaflet-popup-content {
+        width: 270px !important;
+        max-width: calc(100vw - 60px) !important;
+    }
+
+    .facility-popup-hero {
+        height: 145px !important;
+    }
+}
+
+/* =====================================================
+   POPUP FASILITAS — COMPACT & RAPI
+   Khusus popup fasilitas, bukan popup trayek
+   ===================================================== */
+
+.leaflet-popup.facility-popup-container {
+    max-width: 300px !important;
+}
+
+.leaflet-popup.facility-popup-container .leaflet-popup-content-wrapper {
+    width: auto !important;
+    min-width: 0 !important;
+    padding: 0 !important;
+    overflow: hidden !important;
+    border-radius: 14px !important;
+    background: #fff !important;
+    box-shadow: 0 5px 20px rgba(15, 40, 65, 0.20) !important;
+}
+
+.leaflet-popup.facility-popup-container .leaflet-popup-content {
+    width: 280px !important;
+    max-width: calc(100vw - 70px) !important;
+    min-width: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    line-height: 1.4 !important;
+    white-space: normal !important;
+}
+
+.leaflet-popup.facility-popup-container .facility-popup {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow: hidden !important;
+    border-radius: 14px !important;
+    background: #fff !important;
+}
+
+/* FOTO */
+.leaflet-popup.facility-popup-container .facility-popup-hero {
+    position: relative !important;
+    display: block !important;
+    width: 100% !important;
+    height: 155px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow: hidden !important;
+    background: #e9eef3 !important;
+}
+
+.leaflet-popup.facility-popup-container .facility-popup-image {
+    display: block !important;
+    width: 100% !important;
+    height: 100% !important;
+    max-width: none !important;
+    max-height: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    object-fit: cover !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+}
+
+/* OVERLAY JUDUL DAN SUMBER FOTO */
+.leaflet-popup.facility-popup-container .facility-popup-overlay {
+    position: absolute !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    left: 0 !important;
+    padding: 34px 13px 10px !important;
+    background: linear-gradient(
+        to bottom,
+        transparent,
+        rgba(0, 0, 0, 0.80)
+    ) !important;
+}
+
+.leaflet-popup.facility-popup-container .facility-popup-title {
+    margin: 0 25px 5px 0 !important;
+    padding: 0 !important;
+    color: #fff !important;
+    background: transparent !important;
+    font-size: 16px !important;
+    font-weight: 700 !important;
+    line-height: 1.25 !important;
+    overflow-wrap: anywhere !important;
+}
+
+.leaflet-popup.facility-popup-container .facility-popup-source {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    align-items: center !important;
+    gap: 4px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    color: #fff !important;
+    background: transparent !important;
+    font-size: 10px !important;
+    line-height: 1.4 !important;
+}
+
+.leaflet-popup.facility-popup-container .facility-popup-source a,
+.leaflet-popup.facility-popup-container .facility-popup-source span {
+    color: #fff !important;
+    overflow-wrap: anywhere !important;
+}
+
+.leaflet-popup.facility-popup-container .facility-popup-source a {
+    text-decoration: underline !important;
+}
+
+/* JIKA FOTO TIDAK ADA */
+.leaflet-popup.facility-popup-container .facility-popup-no-photo {
+    padding: 15px !important;
+    background: #173c5d !important;
+}
+
+.leaflet-popup.facility-popup-container
+.facility-popup-no-photo .facility-popup-title {
+    margin-bottom: 7px !important;
+}
+
+/* DETAIL: JENIS, ALAMAT, KOORDINAT */
+.leaflet-popup.facility-popup-container .facility-popup-info {
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 7px 12px 9px !important;
+    background: #fff !important;
+}
+
+.leaflet-popup.facility-popup-container .facility-popup-row {
+    display: flex !important;
+    align-items: flex-start !important;
+    gap: 9px !important;
+    margin: 0 !important;
+    padding: 9px 0 !important;
+    border-bottom: 1px solid #e8edf2 !important;
+}
+
+.leaflet-popup.facility-popup-container
+.facility-popup-row:last-child {
+    padding-bottom: 2px !important;
+    border-bottom: 0 !important;
+}
+
+.leaflet-popup.facility-popup-container .facility-popup-icon {
+    display: flex !important;
+    flex: 0 0 32px !important;
+    width: 32px !important;
+    height: 32px !important;
+    align-items: center !important;
+    justify-content: center !important;
+    border-radius: 50% !important;
+    font-size: 14px !important;
+}
+
+.leaflet-popup.facility-popup-container
+.facility-popup-icon.pedestrian {
+    color: #e53935 !important;
+    background: #ffeded !important;
+}
+
+.leaflet-popup.facility-popup-container
+.facility-popup-icon.location,
+.leaflet-popup.facility-popup-container
+.facility-popup-icon.coordinates {
+    color: #1769aa !important;
+    background: #e8f2ff !important;
+}
+
+.leaflet-popup.facility-popup-container .facility-popup-detail {
+    display: flex !important;
+    flex: 1 !important;
+    min-width: 0 !important;
+    flex-direction: column !important;
+    gap: 2px !important;
+}
+
+.leaflet-popup.facility-popup-container .facility-popup-detail span {
+    color: #7b8da0 !important;
+    font-size: 10px !important;
+}
+
+.leaflet-popup.facility-popup-container .facility-popup-detail b {
+    display: block !important;
+    color: #183653 !important;
+    font-size: 11px !important;
+    font-weight: 600 !important;
+    line-height: 1.4 !important;
+    overflow-wrap: anywhere !important;
+}
+
+/* TOMBOL X */
+.leaflet-popup.facility-popup-container .leaflet-popup-close-button {
+    z-index: 1000 !important;
+    top: 8px !important;
+    right: 8px !important;
+    display: flex !important;
+    width: 28px !important;
+    height: 28px !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 0 !important;
+    border: 0 !important;
+    border-radius: 50% !important;
+    color: #173c5d !important;
+    background: #fff !important;
+    font-size: 20px !important;
+    line-height: 28px !important;
+    box-shadow: 0 2px 7px rgba(0, 0, 0, 0.18) !important;
+}
+
+.leaflet-popup.facility-popup-container .leaflet-popup-tip {
+    background: #fff !important;
+}
+
+/* LAYAR KECIL */
+@media (max-width: 480px) {
+    .leaflet-popup.facility-popup-container .leaflet-popup-content {
+        width: min(260px, calc(100vw - 70px)) !important;
+        max-width: calc(100vw - 70px) !important;
+    }
+
+    .leaflet-popup.facility-popup-container .facility-popup-hero {
+        height: 140px !important;
+    }
+}
+/* =========================================================
+   RESPONSIVE MOBILE — WEBGIS TRANSPORTASI CIBINONG
+   Khusus HP, tampilan laptop tidak diubah
+   ========================================================= */
+
+@media screen and (max-width: 600px) {
+
+    /* Cegah halaman melebar ke samping */
+    html,
+    body {
+        width: 100%;
+        max-width: 100%;
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+    }
+
+    #app,
+    .app-container,
+    .main-container {
+        width: 100%;
+        max-width: 100%;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    /* HEADER */
+    header,
+    .main-header,
+    .app-header,
+    .navbar {
+        width: 100%;
+        min-height: auto;
+        padding: 12px 14px;
+        box-sizing: border-box;
+    }
+
+    .header-title,
+    .logo-title {
+        font-size: 18px;
+        line-height: 1.3;
+    }
+
+    .header-subtitle,
+    .logo-subtitle {
+        font-size: 11px;
+    }
+
+    /* PENCARIAN */
+    .search-container,
+    .search-box {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+
+    /* NAVIGASI */
+    nav,
+    .navbar-menu,
+    .nav-menu {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 5px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    nav a,
+    .nav-menu a,
+    .navbar-menu a {
+        flex: 1 1 20%;
+        min-width: 0;
+        padding: 9px 4px;
+        font-size: 11px;
+        text-align: center;
+    }
+
+    /* PANEL LAYER */
+    .sidebar,
+    #sidebar,
+    .layer-panel,
+    #layerPanel {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+        box-sizing: border-box;
+    }
+
+    .layer-card,
+    .layer-group,
+    .layer-section {
+        margin-bottom: 8px;
+        padding: 10px;
+        box-sizing: border-box;
+    }
+
+    /* PETA UTAMA */
+    #map,
+    #mainMap,
+    .map-container,
+    .main-map {
+        width: 100% !important;
+        max-width: 100% !important;
+        height: 48vh !important;
+        min-height: 300px;
+        max-height: 480px;
+        margin: 0;
+        box-sizing: border-box;
+    }
+
+    /* PANEL KANAN */
+    .right-panel,
+    #rightPanel,
+    .info-panel {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+        box-sizing: border-box;
+    }
+
+    /* STATISTIK, PERSEBARAN, ANALISIS */
+    .dashboard,
+    .dashboard-container,
+    .bottom-panels,
+    .panel-container {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: 10px;
+        box-sizing: border-box;
+    }
+
+    .dashboard-panel,
+    .statistik-panel,
+    .distribution-panel,
+    .analysis-panel {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+
+    /* MINIMAP ANALISIS */
+    #analysisMiniMap,
+    #analysisMap,
+    .analysis-mini-map {
+        width: 100% !important;
+        height: 220px !important;
+        min-height: 180px;
+        box-sizing: border-box;
+    }
+
+    /* PROFIL PENGEMBANG */
+    .footer,
+    footer,
+    .developer-section,
+    .team-section {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+
+    .developer-card,
+    .team-member,
+    .profile-card {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+
+    /* TABEL STATISTIK */
+    table {
+        width: 100%;
+        max-width: 100%;
+        font-size: 11px;
+    }
+
+    th,
+    td {
+        padding: 7px 5px;
+    }
+
+    /* POPUP FASILITAS */
+    .leaflet-popup-content {
+        max-width: calc(100vw - 70px) !important;
+    }
+
+    /* JANGAN BIARKAN KONTEN MEMBUAT HALAMAN MELEBAR */
+    img,
+    canvas,
+    iframe {
+        max-width: 100%;
+    }
+}

@@ -1,0 +1,50 @@
+{
+  "type": "FeatureCollection",
+  "name": "Results_2025",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "nama_kelas": "Lahan Kosong",
+        "luas_ha": 351.1,
+        "overall_accuracy_persen": 90.61,
+        "kappa": 0.8849,
+        "model": "RF"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "nama_kelas": "Kebun Campuran",
+        "luas_ha": 1574.53,
+        "overall_accuracy_persen": 90.61,
+        "kappa": 0.8849,
+        "model": "RF"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "nama_kelas": "Permukiman",
+        "luas_ha": 2452.6,
+        "overall_accuracy_persen": 90.61,
+        "kappa": 0.8849,
+        "model": "RF"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "nama_kelas": "Industri",
+        "luas_ha": 305.89,
+        "overall_accuracy_persen": 90.61,
+        "kappa": 0.8849,
+        "model": "RF"
+      }
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "type": "FeatureCollection",
+  "name": "Results_2018",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "nama_kelas": "Lahan Kosong",
+        "luas_ha": 364.18
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "nama_kelas": "Kebun Campuran",
+        "luas_ha": 1687.78
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "nama_kelas": "Permukiman",
+        "luas_ha": 2367.82
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "nama_kelas": "Industri",
+        "luas_ha": 244.35
+      }
+    }
+  ]
+}

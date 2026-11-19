@@ -1,0 +1,1441 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>WebGIS Transportasi Cibinong</title>
+
+
+  <!-- ==================================================
+       LEAFLET
+       ================================================== -->
+
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+  >
+
+  <script
+    src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+  ></script>
+
+
+  <!-- ==================================================
+       SHP.JS
+       ================================================== -->
+
+  <script
+    src="https://unpkg.com/shpjs@latest/dist/shp.js"
+  ></script>
+
+
+  <!-- ==================================================
+       FONT AWESOME
+       ================================================== -->
+
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+  >
+
+
+  <!-- ==================================================
+       CSS
+       ================================================== -->
+
+  <link
+    rel="stylesheet"
+    href="style.css"
+  >
+
+</head>
+
+
+<body>
+
+
+<div class="app">
+
+
+  <!-- ==================================================
+       HEADER
+       ================================================== -->
+
+  <header class="topbar">
+
+    <div class="brand">
+
+      <div class="logo">
+        <i class="fa-solid fa-map-location-dot"></i>
+      </div>
+
+      <div>
+
+        <h1>
+          WebGIS Transportasi Cibinong
+        </h1>
+
+        <span>
+          Visualisasi Jaringan Transportasi
+        </span>
+
+      </div>
+
+    </div>
+
+
+    <!-- SEARCH -->
+
+    <div class="search-box">
+
+      <input
+        id="searchInput"
+        type="text"
+        placeholder="Cari lokasi..."
+      >
+
+      <button id="searchBtn">
+
+        <i class="fa-solid fa-magnifying-glass"></i>
+
+      </button>
+
+    </div>
+
+
+    <!-- NAVIGASI -->
+
+    <nav class="topnav">
+
+      <button
+        class="nav-btn active"
+        onclick="goHome()"
+      >
+
+        <i class="fa-solid fa-house"></i>
+
+        Beranda
+
+      </button>
+
+
+      <button
+        class="nav-btn"
+        onclick="scrollToSection('map')"
+      >
+
+        <i class="fa-solid fa-map"></i>
+
+        Peta
+
+      </button>
+
+
+      <button
+        class="nav-btn"
+        onclick="showInfo()"
+      >
+
+        <i class="fa-solid fa-circle-info"></i>
+
+        Informasi
+
+      </button>
+
+
+      <button
+        class="nav-btn"
+        onclick="showAbout()"
+      >
+
+        <i class="fa-solid fa-circle-question"></i>
+
+        Tentang
+
+      </button>
+
+    </nav>
+
+  </header>
+
+
+  <!-- ==================================================
+       MAIN GRID
+       ================================================== -->
+
+  <main class="main-grid">
+
+
+    <!-- ==================================================
+         LEFT PANEL
+         ================================================== -->
+
+    <aside class="panel left-panel">
+
+
+      <div class="panel-title">
+
+        <span>
+          LAYER
+        </span>
+
+        <i class="fa-solid fa-layer-group"></i>
+
+      </div>
+
+
+      <!-- BATAS WILAYAH -->
+
+      <div class="layer-group">
+
+        <h3>
+          Batas Wilayah
+        </h3>
+
+
+        <label class="check-row">
+
+          <input
+            type="checkbox"
+            id="batasKecamatan"
+            checked
+          >
+
+          <span class="symbol boundary"></span>
+
+          Batas Kecamatan Cibinong
+
+        </label>
+
+      </div>
+
+
+      <!-- JARINGAN JALAN -->
+
+      <div class="layer-group">
+
+        <h3>
+          Jaringan Jalan
+        </h3>
+
+
+        <label class="check-row">
+
+          <input
+            type="checkbox"
+            id="arteri"
+            checked
+          >
+
+          <span class="line-sample arteri"></span>
+
+          Jalan Arteri
+
+        </label>
+
+
+        <label class="check-row">
+
+          <input
+            type="checkbox"
+            id="lokal"
+            checked
+          >
+
+          <span class="line-sample lokal"></span>
+
+          Jalan Lokal
+
+        </label>
+
+
+        <label class="check-row">
+
+          <input
+            type="checkbox"
+            id="utama"
+            checked
+          >
+
+          <span class="line-sample utama"></span>
+
+          Jalan Utama
+
+        </label>
+
+
+        <label class="check-row">
+
+          <input
+            type="checkbox"
+            id="kecil"
+            checked
+          >
+
+          <span class="line-sample kecil"></span>
+
+          Jalan Setapak
+
+        </label>
+
+      </div>
+
+
+      <!-- SARANA TRANSPORTASI -->
+<div class="layer-group">
+
+  <h3>
+    Sarana Transportasi
+  </h3>
+
+
+  <!-- AKSES PEJALAN KAKI -->
+  <label class="check-row">
+
+    <input
+      type="checkbox"
+      id="aksesPejalan"
+      checked
+    >
+
+    <span class="point pedestrian"></span>
+
+    Akses Pejalan Kaki
+
+  </label>
+
+
+  <!-- ANGKUTAN UMUM -->
+  <label class="check-row">
+
+    <input
+      type="checkbox"
+      id="terminal"
+      checked
+    >
+
+    <span class="point terminal"></span>
+
+    Angkutan Umum
+
+  </label>
+
+
+  <!-- STASIUN -->
+  <label class="check-row">
+
+    <input
+      type="checkbox"
+      id="stasiun"
+      checked
+    >
+
+    <span class="point stasiun"></span>
+
+    Stasiun
+
+  </label>
+
+
+  <!-- FASILITAS UMUM -->
+  <label class="check-row">
+
+    <input
+      type="checkbox"
+      id="halte"
+      checked
+    >
+
+    <span class="point halte"></span>
+
+    Fasilitas Umum
+
+  </label>
+
+</div>
+
+
+<!-- RUTE ANGKOT -->
+
+<div class="layer-group angkot-layer-group">
+
+  <h3>Rute Angkutan Umum</h3>
+
+  <div id="daftarRuteAngkot" class="angkot-route-grid">
+
+    <!-- KOLOM KIRI -->
+
+    <div class="angkot-route-column">
+
+      <label class="check-row">
+        <input type="checkbox" class="angkot-route-checkbox"
+          value="64">
+        <span class="line-sample rute-64"></span>
+        Trayek 64
+      </label>
+
+      <label class="check-row">
+        <input type="checkbox" class="angkot-route-checkbox"
+          value="72">
+        <span class="line-sample rute-72"></span>
+        Trayek 72
+      </label>
+
+      <label class="check-row">
+        <input type="checkbox" class="angkot-route-checkbox"
+          value="32">
+        <span class="line-sample rute-32"></span>
+        Trayek 32
+      </label>
+
+            <label class="check-row">
+        <input type="checkbox" class="angkot-route-checkbox"
+          value="35">
+        <span class="line-sample rute-35"></span>
+        Trayek 35
+      </label>
+
+    </div>
+
+    <!-- KOLOM KANAN -->
+
+    <div class="angkot-route-column">
+
+      <label class="check-row">
+        <input type="checkbox" class="angkot-route-checkbox"
+          value="71">
+        <span class="line-sample rute-71"></span>
+        Trayek 71
+      </label>
+
+      <label class="check-row">
+        <input type="checkbox" class="angkot-route-checkbox"
+          value="66">
+        <span class="line-sample rute-66"></span>
+        Trayek 66
+      </label>
+
+      <label class="check-row">
+        <input type="checkbox" class="angkot-route-checkbox"
+          value="38">
+        <span class="line-sample rute-38"></span>
+        Trayek 38
+      </label>
+
+    </div>
+
+  </div>
+
+</div>
+</aside> <!-- PENUTUP SIDEBAR KIRI -->
+
+    <!-- ==================================================
+         MAP
+         ================================================== -->
+<section
+    id="map"
+    class="map-panel"
+>
+    <div id="mapid"></div>
+
+      <div class="map-tools">
+
+        <button
+          onclick="map.zoomIn()"
+          title="Zoom in"
+        >
+
+          +
+
+        </button>
+
+
+        <button
+          onclick="map.zoomOut()"
+          title="Zoom out"
+        >
+
+          −
+
+        </button>
+
+
+        <button
+          onclick="goHome()"
+          title="Kembali ke Cibinong"
+        >
+
+          <i class="fa-solid fa-house"></i>
+
+        </button>
+
+      </div>
+
+<section id="trayekDetailPanel" class="trayek-detail-panel" hidden>
+  <div class="trayek-detail-header">
+    <div>
+      <h2>🚌 Detail Trayek 64</h2>
+      <p>Cibinong – Citeureup – Gunung Putri – Cileungsi – Jonggol</p>
+    </div>
+<button
+
+async function tukarArahTrayek(nomorTrayek) {
+    if (nomorTrayek !== '72' || !dataTrayek72Asli) {
+        console.error('Data Trayek 72 belum tersedia.');
+        return;
+    }
+
+    arahTrayek72Terbalik = !arahTrayek72Terbalik;
+
+    const dataBaru = JSON.parse(JSON.stringify(dataTrayek72Asli));
+
+    dataBaru.features.forEach(feature => {
+        const geometry = feature.geometry;
+        if (!geometry) return;
+
+        if (geometry.type === 'LineString') {
+            geometry.coordinates.reverse();
+        } else if (geometry.type === 'MultiLineString') {
+            geometry.coordinates.reverse();
+            geometry.coordinates.forEach(segment => segment.reverse());
+        }
+    });
+
+    if (layerTrayek72) {
+        map.removeLayer(layerTrayek72);
+    }
+
+    layerTrayek72 = L.geoJSON(dataBaru, {
+        style: {
+            color: '#A855F7',
+            weight: 5,
+            opacity: 1,
+            lineCap: 'round',
+            lineJoin: 'round'
+        }
+    });
+
+    pasangDetailTrayek(layerTrayek72, dataBaru, '72');
+    pasangPenandaAwalAkhir(layerTrayek72, dataBaru, '72');
+
+    const checkbox = document.querySelector(
+        '.angkot-route-checkbox[value="72"]'
+    );
+
+    if (checkbox && checkbox.checked) {
+        layerTrayek72.addTo(map);
+    }
+
+    console.log(
+        'Arah Trayek 72:',
+        arahTrayek72Terbalik ? 'terbalik' : 'semula'
+    );
+}
+
+  <div class="trayek-detail-body">
+    <p><b>Jenis:</b> Lokal / Angkot</p>
+    <p><b>Panjang rute:</b> <span id="trayek64Length">Menghitung...</span></p>
+
+    <h3>Urutan lokasi pengarah</h3>
+    <ol>
+      <li>Cibinong (awal)</li>
+      <li>Citeureup</li>
+      <li>Koridor Gunung Putri</li>
+      <li>Koridor Cileungsi</li>
+      <li>Jonggol (arah akhir)</li>
+    </ol>
+
+    <p class="trayek-warning">
+      Jalur hasil routing otomatis dan masih perlu diverifikasi.
+    </p>
+
+    <label>
+      <input type="checkbox" id="trayek64MapToggle" checked>
+      Tampilkan jalur di peta
+    </label>
+  </div>
+</section>
+
+
+<!-- KARTU ACCURACY & AREA RESULTS -->
+<section id="accuracyAreaCard" class="accuracy-area-card" hidden>
+    <h2>ACCURACY &amp; AREA RESULTS</h2>
+
+    <div class="accuracy-row">
+        <span>Overall Accuracy</span>
+        <b id="overallAccuracy">-</b>
+    </div>
+
+    <div class="accuracy-row">
+        <span>Kappa</span>
+        <b id="kappaValue">-</b>
+    </div>
+
+    <div class="accuracy-row">
+        <span>Model Used</span>
+        <b id="modelValue">RF</b>
+    </div>
+
+    <div class="accuracy-divider"></div>
+
+    <h3>AREA PER CLASS</h3>
+
+    <div class="accuracy-area-row">
+        <span class="legend-color" style="background:#d500f9"></span>
+        <span>Lahan Kosong</span>
+        <b id="areaLahanKosong">-</b>
+    </div>
+
+    <div class="accuracy-area-row">
+        <span class="legend-color" style="background:#16a34a"></span>
+        <span>Kebun Campuran</span>
+        <b id="areaKebunCampuran">-</b>
+    </div>
+
+    <div class="accuracy-area-row">
+        <span class="legend-color" style="background:#e51c23"></span>
+        <span>Permukiman</span>
+        <b id="areaPermukiman">-</b>
+    </div>
+
+    <div class="accuracy-area-row">
+        <span class="legend-color" style="background:#ffdf00"></span>
+        <span>Industri</span>
+        <b id="areaIndustri">-</b>
+    </div>
+
+    <p class="accuracy-note">Hasil klasifikasi Random Forest</p>
+</section>
+
+      <div class="scale-note">
+
+        Data jaringan jalan:
+        <b>Data RBI BIG</b>
+
+        <br>
+
+        Basemap:
+        <b>OpenStreetMap</b>
+
+      </div>
+
+    </section>
+
+
+    <!-- ==================================================
+         RIGHT PANEL
+         ================================================== -->
+
+    <aside class="panel right-panel">
+
+
+      <div class="panel-title">
+
+        <span>
+          INFORMASI WILAYAH
+        </span>
+
+        <i class="fa-solid fa-circle-info"></i>
+
+      </div>
+
+
+      <div class="region-info-card">
+
+
+        <!-- FOTO -->
+
+        <div class="region-image">
+
+          <img
+            src="assets/cibinong_profile.png"
+            alt="Kantor Bupati Bogor"
+          >
+
+          <div class="image-source">
+            Sumber: bogor.inews.id
+          </div>
+
+        </div>
+
+
+        <!-- NAMA WILAYAH -->
+
+        <h2 class="region-name">
+          Kecamatan Cibinong
+        </h2>
+
+
+        <!-- LOKASI -->
+
+        <div class="region-location">
+
+          <i class="fa-solid fa-location-dot"></i>
+
+          <span>
+            Kabupaten Bogor, Jawa Barat
+          </span>
+
+        </div>
+
+
+        <!-- DESKRIPSI -->
+
+        <p class="region-description">
+
+          Kecamatan Cibinong merupakan pusat pemerintahan
+          Kabupaten Bogor dengan aktivitas perkotaan yang tinggi
+          dan didukung oleh jaringan transportasi yang
+          menghubungkan berbagai fasilitas dan kawasan strategis.
+
+        </p>
+
+
+        <!-- INFORMASI DASAR -->
+
+        <div class="region-basic-info">
+
+          <div>
+
+            <span>
+              Kabupaten
+            </span>
+
+            <strong>
+              Bogor
+            </strong>
+
+          </div>
+
+
+          <div>
+
+            <span>
+              Provinsi
+            </span>
+
+            <strong>
+              Jawa Barat
+            </strong>
+
+          </div>
+
+
+          <div>
+
+            <span>
+              Luas Wilayah
+            </span>
+
+            <strong>
+              ± 46 km²
+            </strong>
+
+          </div>
+
+        </div>
+
+
+        <!-- SUMBER DATA -->
+
+        <div class="info-card source-data-card">
+
+          <h3>
+            SUMBER DATA
+          </h3>
+
+
+          <div class="info-row">
+
+            <span>
+              Jalan
+            </span>
+
+            <b>
+              BIG, MoovitApp
+            </b>
+
+          </div>
+
+
+          <div class="info-row">
+
+            <span>
+              Persebaran Titik
+            </span>
+
+            <b>
+              Google Maps
+            </b>
+
+          </div>
+
+
+          <div class="info-row">
+
+            <span>
+              Analisis Spasial
+            </span>
+
+            <b>
+              Google Earth Engine, ArcMap
+            </b>
+
+          </div>
+
+        </div>
+
+
+        <!-- PETUNJUK -->
+
+        <div class="help-card">
+
+          <h3>
+
+            <i class="fa-solid fa-lightbulb"></i>
+
+            Petunjuk Penggunaan
+
+          </h3>
+
+
+          <p>
+
+            Gunakan panel layer di sebelah kiri untuk mengaktifkan
+            atau menonaktifkan layer sesuai kebutuhan. Klik jaringan
+            jalan atau titik fasilitas pada peta untuk menampilkan
+            informasi objek. Gunakan kontrol peta untuk memperbesar,
+            memperkecil, dan mengembalikan tampilan ke wilayah Cibinong.
+
+          </p>
+
+
+        </div>
+
+
+      </div>
+
+    </aside>
+
+
+  </main>
+
+
+  <!-- ==================================================
+       DASHBOARD
+       ================================================== -->
+
+  <section class="dashboard-grid">
+
+
+    <!-- ==================================================
+         STATISTIK JARINGAN JALAN
+         ================================================== -->
+
+    <div class="dash-card">
+
+
+      <div class="dash-header">
+
+        <span>
+          STATISTIK JARINGAN JALAN
+        </span>
+
+        <i class="fa-solid fa-road"></i>
+
+      </div>
+
+
+      <div class="road-table-wrapper">
+
+        <table class="road-table">
+
+          <thead>
+
+            <tr>
+
+              <th>
+                Jenis Jalan
+              </th>
+
+              <th>
+                Jumlah Feature
+              </th>
+
+              <th>
+                Total Panjang
+              </th>
+
+            </tr>
+
+          </thead>
+
+
+          <tbody>
+
+
+            <tr>
+
+              <td>
+
+                <span class="table-road-line arteri"></span>
+
+                Jalan Arteri
+
+              </td>
+
+              <td id="tableArteri">
+                -
+              </td>
+
+              <td id="lengthArteri">
+                -
+              </td>
+
+            </tr>
+
+
+            <tr>
+
+              <td>
+
+                <span class="table-road-line lokal"></span>
+
+                Jalan Lokal
+
+              </td>
+
+              <td id="tableLokal">
+                -
+              </td>
+
+              <td id="lengthLokal">
+                -
+              </td>
+
+            </tr>
+
+
+            <tr>
+
+              <td>
+
+                <span class="table-road-line utama"></span>
+
+                Jalan Utama
+
+              </td>
+
+              <td id="tableUtama">
+                -
+              </td>
+
+              <td id="lengthUtama">
+                -
+              </td>
+
+            </tr>
+
+
+            <tr>
+
+              <td>
+
+                <span class="table-road-line kecil"></span>
+
+                Jalan Setapak
+
+              </td>
+
+              <td id="tableSetapak">
+                -
+              </td>
+
+              <td id="lengthSetapak">
+                -
+              </td>
+
+            </tr>
+
+
+            <tr class="total-row">
+
+              <td>
+                TOTAL
+              </td>
+
+              <td id="tableTotal">
+                -
+              </td>
+
+              <td id="lengthTotal">
+                -
+              </td>
+
+            </tr>
+
+
+          </tbody>
+
+        </table>
+
+      </div>
+
+    </div>
+
+<!-- ==================================================
+     PERSEBARAN TITIK
+     ================================================== -->
+
+<div class="dash-card">
+
+  <div class="dash-header">
+
+    <span>
+      PERSEBARAN TITIK
+    </span>
+
+    <i class="fa-solid fa-location-dot"></i>
+
+  </div>
+
+
+  <div class="facility-summary">
+
+
+    <!-- 4 KATEGORI TITIK -->
+
+    <div class="facility-category-grid">
+
+
+      <!-- AKSES PEJALAN KAKI -->
+
+      <div class="facility-category pedestrian">
+
+        <div class="facility-category-icon">
+          <i class="fa-solid fa-person-walking"></i>
+        </div>
+
+        <div class="facility-category-info">
+
+          <span>
+            Akses Pejalan Kaki
+          </span>
+
+          <strong id="countPedestrian">
+            -
+          </strong>
+
+        </div>
+
+      </div>
+
+
+      <!-- ANGKUTAN UMUM -->
+
+      <div class="facility-category public-transport">
+
+        <div class="facility-category-icon">
+          <i class="fa-solid fa-bus"></i>
+        </div>
+
+        <div class="facility-category-info">
+
+          <span>
+            Angkutan Umum
+          </span>
+
+          <strong id="countAngkutan">
+            -
+          </strong>
+
+        </div>
+
+      </div>
+
+
+      <!-- STASIUN -->
+
+      <div class="facility-category station">
+
+        <div class="facility-category-icon">
+          <i class="fa-solid fa-train-subway"></i>
+        </div>
+
+        <div class="facility-category-info">
+
+          <span>
+            Stasiun
+          </span>
+
+          <strong id="countStasiun">
+            -
+          </strong>
+
+        </div>
+
+      </div>
+
+
+      <!-- FASILITAS UMUM -->
+
+      <div class="facility-category facility">
+
+        <div class="facility-category-icon">
+          <i class="fa-solid fa-building"></i>
+        </div>
+
+        <div class="facility-category-info">
+
+          <span>
+            Fasilitas Umum
+          </span>
+
+          <strong id="countFasilitas">
+            -
+          </strong>
+
+        </div>
+
+      </div>
+
+
+    </div>
+
+
+    <!-- LIST TITIK -->
+
+    <div
+      id="facilityList"
+      class="facility-list"
+    >
+
+      <div class="facility-list-item">
+
+        Memuat data titik...
+
+      </div>
+
+    </div>
+
+
+  </div>
+
+</div>
+
+    <!-- ==================================================
+         ANALISIS SPASIAL
+         ================================================== -->
+
+    <div class="dash-card">
+
+
+      <div class="dash-header">
+
+        <span>
+          ANALISIS SPASIAL
+        </span>
+
+        <i class="fa-solid fa-chart-column"></i>
+
+      </div>
+
+
+      <select
+        id="analysisSelect"
+      >
+
+        <option value="none">
+          Pilih Analisis
+        </option>
+
+        <option value="bufferArteri">
+          Buffer Jalan Arteri
+        </option>
+
+        <option value="bufferLokal">
+          Buffer Jalan Lokal
+        </option>
+
+        <option value="bufferUtama">
+          Buffer Jalan Utama
+        </option>
+
+        <option value="bufferKecil">
+          Buffer Jalan Setapak
+        </option>
+
+        <option value="bufferTitik">
+          Buffer Titik Fasilitas
+        </option>
+
+        <option value="tutupan2018">
+  Tutupan Lahan 2018
+</option>
+
+<option value="tutupan2025">
+  Tutupan Lahan 2025
+</option>
+
+      </select>
+
+
+<div class="analysis-result">
+
+    <div>
+        <span>Jenis Analisis</span>
+        <b id="analysisType">-</b>
+    </div>
+
+    <div>
+        <span>Jarak Buffer</span>
+        <b id="analysisDistance">-</b>
+    </div>
+
+</div>
+
+<div class="analysis-map">
+
+    <div id="analysisMap" class="analysis-mini-map"></div>
+
+   
+<div id="tutupanLegend" class="tutupan-legend" style="display: none;">
+    <div class="legend-title">Kelas Tutupan Lahan</div>
+
+    <div class="legend-items">
+        <div class="legend-item">
+            <span class="legend-color" style="background:#d500f9"></span>
+            <span>Lahan Kosong</span>
+        </div>
+        <div class="legend-item">
+            <span class="legend-color" style="background:#16a34a"></span>
+            <span>Kebun Campuran</span>
+        </div>
+        <div class="legend-item">
+            <span class="legend-color" style="background:#e51c23"></span>
+            <span>Permukiman</span>
+        </div>
+        <div class="legend-item">
+            <span class="legend-color" style="background:#ffdf00"></span>
+            <span>Industri</span>
+        </div>
+    </div>
+</div>
+
+      <div class="analysis-map">
+
+        <div
+          id="analysisMap"
+          class="analysis-mini-map"
+        ></div>
+
+      </div>
+
+
+    </div>
+
+
+  </section>
+
+
+  <!-- ==================================================
+       FOOTER
+       ================================================== -->
+
+  <footer class="main-footer">
+
+
+    <div class="footer-content">
+
+
+      <!-- NATHANIELLA -->
+
+      <div class="creator-card">
+
+        <img
+          src="assets/nathaniella.jpg"
+          class="creator-photo"
+          alt="Nathaniella Christin"
+        >
+
+        <div class="creator-detail">
+
+          <h3>
+            Nathaniella Christin | 117230015
+          </h3>
+
+          <p>
+
+            <strong>
+              Peran:
+            </strong>
+
+            Infrastruktur & Frontend WebGIS
+
+          </p>
+
+          <p class="creator-description">
+
+            Menangani pengembangan tampilan WebGIS,
+            visualisasi jaringan jalan, fasilitas
+            transportasi, dan integrasi data geospasial.
+
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <div class="footer-divider"></div>
+
+
+      <!-- NAYSILLA APRILIA RIVAI -->
+
+      <div class="creator-card">
+
+        <img
+          src="assets/naysilla.jfif"
+          class="creator-photo"
+          alt="Naysilla Aprilia Rivai | 117230012"
+        >
+
+        <div class="creator-detail">
+
+          <h3>
+            Naysilla Aprilia Rivai | 117230012
+          </h3>
+
+          <p>
+
+            <strong>
+              Peran:
+            </strong>
+
+            Pengolahan & Pengembangan Data
+
+          </p>
+
+          <p class="creator-description">
+
+            Mengelola data dan mendukung pengolahan
+            jaringan jalan, persebaran titik,
+            serta analisis geospasial.
+
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <div class="footer-divider"></div>
+
+
+      <!-- UPN -->
+
+      <div class="university-section">
+
+        <img
+          src="assets/logo-upn.png"
+          class="upn-logo"
+          alt="Logo UPN Veteran Yogyakarta"
+        >
+
+        <div class="university-text">
+
+          PROGRAM STUDI S1 TEKNIK GEOMATIKA
+
+          <br>
+
+          JURUSAN TEKNIK GEOLOGI
+
+          <br>
+
+          FAKULTAS TEKNOLOGI MINERAL DAN ENERGI
+
+          <br>
+
+          UNIVERSITAS PEMBANGUNAN NASIONAL
+          “VETERAN” YOGYAKARTA
+
+          <div class="year">
+            TAHUN 2026
+          </div>
+
+        </div>
+
+      </div>
+
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+      <span>
+        © 2026 WebGIS Transportasi Cibinong
+      </span>
+
+      <span>
+        Teknik Geomatika • Sistem Informasi Geografis
+      </span>
+
+    </div>
+
+
+  </footer>
+
+
+</div>
+
+
+<!-- ==================================================
+     MODAL
+     ================================================== -->
+
+<div
+  id="infoModal"
+  class="modal hidden"
+>
+
+  <div class="modal-content">
+
+    <button
+      class="modal-close"
+      onclick="closeModal()"
+    >
+
+      ×
+
+    </button>
+
+
+    <div id="modalBody"></div>
+
+  </div>
+
+</div>
+
+
+<!-- ==================================================
+     SCRIPT
+     ================================================== -->
+
+<script
+  src="https://cdn.jsdelivr.net/npm/@turf/turf@7/turf.min.js"
+></script>
+
+<script src="https://cdn.jsdelivr.net/npm/@turf/turf@7/turf.min.js"></script>
+<script src="script.js"></script>
+
+</body>
+
+</html>

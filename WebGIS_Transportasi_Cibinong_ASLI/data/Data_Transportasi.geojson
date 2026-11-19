@@ -1,0 +1,213 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "Nama": "Cibinong City Mall Bus Stop",
+        "Kategori": "Angkutan Umum",
+        "Alamat": "Jl. Raya Jakarta-Bogor No.507, Nanggewer Mekar, Kec. Cibinong, Kabupaten Bogor, Jawa Barat 16912",
+        "Sumber Foto": "Google Maps"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          106.84366713950968,
+          -6.48402644941045
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Nama": "Terminal Cibinong",
+        "Kategori": "Angkutan Umum",
+        "Alamat": "Cirimekar, Kec. Cibinong, Kabupaten Bogor, Jawa Barat",
+        "Sumber Foto": "https://www.cibinong.id/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          106.8540995647738,
+          -6.467131216236087
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Nama": "Stasiun Cibinong",
+        "Kategori": "Stasiun",
+        "Alamat": "Jl. Kb. Kopi Jl. Padurenan No.Blok, Pabuaran, Kec. Cibinong, Kabupaten Bogor, Jawa Barat 16916",
+        "Sumber Foto": "https://id.wikipedia.org/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          106.85260986595152,
+          -6.464087122054469
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Nama": "Halte St. Cibinong",
+        "Kategori": "Angkutan Umum",
+        "Alamat": "Jl. Raya Jakarta-Bogor No.23-748, Pabuaran, Kec. Cibinong, Kabupaten Bogor, Jawa Barat 16916",
+        "Sumber Foto": "Google Maps"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          106.8551020713575,
+          -6.465812702896283
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Nama": "Pasar Cibinong",
+        "Kategori": "Fasilitas Umum",
+        "Alamat": "Cirimekar, Kec. Cibinong, Kabupaten Bogor, Jawa Barat",
+        "Sumber Foto": "https://www.kompasiana.com/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          106.85553226767975,
+          -6.466181715507981
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Nama": "Ramayana Cibinong City Point",
+        "Kategori": "Fasilitas Umum",
+        "Alamat": "Jl. Raya Jakarta-Bogor, Cirimekar, Kec. Cibinong, Kabupaten Bogor, Jawa Barat 16917",
+        "Sumber Foto": "Google Maps"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          106.85469203526995,
+          -6.467440753486873
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Nama": "Cibinong Mall",
+        "Kategori": "Fasilitas Umum",
+        "Alamat": "Jl. Raya Mayor Oking Jaya Atmaja No.11, Cibinong, Kec. Cibinong, Kabupaten Bogor, Jawa Barat 16911",
+        "Sumber Foto": "Facebook"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          106.86280803760951,
+          -6.480266498796188
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Nama": "Halte RSUD Cibinong",
+        "Kategori": "Angkutan Umum",
+        "Alamat": "Jl. KSR Dadi Kusmayadi No.27, Tengah, Kec. Cibinong, Kabupaten Bogor, Jawa Barat 16914",
+        "Sumber Foto": "Google Maps"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          106.83138109369493,
+          -6.472857190359217
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Nama": "Alun-alun Kabupaten Bogor",
+        "Kategori": "Fasilitas Umum",
+        "Alamat": "GR9G+R64 Skate Park Pemda, Tengah, Kec. Cibinong, Kabupaten Bogor, Jawa Barat 16914",
+        "Sumber Foto": "https://pesonakota.com/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          106.82470127056125,
+          -6.4805265445681455
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Nama": "Stadion Pakansari",
+        "Kategori": "Fasilitas Umum",
+        "Alamat": "Jl. Ipik Gandamana No.26, Pakansari, Kec. Cibinong, Kabupaten Bogor, Jawa Barat 16915",
+        "Sumber Foto": "https://en.wikipedia.org/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          106.83272355275203,
+          -6.4938922112443365
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Nama": "Stadion Mini Cibinong Kabupaten Bogor",
+        "Kategori": "Fasilitas Umum",
+        "Alamat": "GRFF+CWP, Tengah, Kec. Cibinong, Kabupaten Bogor, Jawa Barat 16914",
+        "Sumber Foto": "https://suarabotim.com/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          106.82475827665104,
+          -6.47642955231157
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Nama": "Shelter RSSM",
+        "Kategori": "Angkutan Umum",
+        "Alamat": "Jl. Raya Mayor Oking Jaya Atmaja No.09, Ciriung, Kec. Cibinong, Kabupaten Bogor, Jawa Barat 16918",
+        "Sumber Foto": "Google Maps"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          106.86480560309546,
+          -6.480313825576905
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Nama": "Skywalk Tegar Beriman Cibinong",
+        "Kategori": "Akses Pejalan Kaki",
+        "Alamat": "GR8P+38X, Jl. Tegar Beriman, Pakansari, Kec. Cibinong, Kabupaten Bogor, Jawa Barat 16915",
+        "Sumber Foto": "https://news.detik.com/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          106.83587133619405,
+          -6.484747143805429
+        ]
+      }
+    }
+  ]
+}
